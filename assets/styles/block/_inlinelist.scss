@@ -20,6 +20,11 @@ $__blockName: 'inlinelist';
 	-webkit-align-items: center;
 	align-items: center;
 
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+
 	&:after {
 		content: "";
 		display: block;
