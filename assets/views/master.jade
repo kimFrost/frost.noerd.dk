@@ -1,5 +1,5 @@
 doctype html
-html(data-ng-app="tilbudswizard", lang="da")
+html(data-ng-app="noerdDk", lang="da")
 	head
 		title Nörd
 		meta(charset="UTF-8")
@@ -7,7 +7,7 @@ html(data-ng-app="tilbudswizard", lang="da")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel='stylesheet', href='./css/main.css')
 		// Main app js
-		//script(src='./scripts/tilbudswizard_head.js')
+		//script(src='./scripts/noerddk_head.js')
 		block head
 		// Fonts
 		//link(type="text/css", rel='stylesheet', href='http://fast.fonts.com/cssapi/ba002805-f090-46ee-884b-859604968980.css')
@@ -17,8 +17,13 @@ html(data-ng-app="tilbudswizard", lang="da")
 		block glovalVars
 		block body
 		section.noerd(data-ng-controller="NoerdCtrl")
+			header.container.container--header
+				div.container__content
+					div.container__inner
+						div Fixed Header
 
-			block content
+			div.container.container--list
+				block content
 
 
-		//script(src='./scripts/tilbudswizard.js')
+		//script(src='./scripts/noerddk.js')

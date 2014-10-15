@@ -6,6 +6,8 @@ $__fitScreenMinHeight: 400px;
 $__headerHeight: 100px;
 $__headerHeight--mobile: 70px;
 
+$__useFixedHeader: false;
+
 // BLOCK
 .container {
     width: 100%;
@@ -130,13 +132,20 @@ $__headerHeight--mobile: 70px;
 	left: 0;
 	z-index: 60;
 	height: $__headerHeight;
-	position: fixed;
-	position: absolute; // <-- OUTCOMMIT THIS FOR FIXED HEADER
-	& + .container--list {
-		padding-top: $__headerHeight;
-		padding-top: 0; // <-- OUTCOMMIT THIS FOR FIXED HEADER
-		& > .container:first-child {
-			padding-top: $__headerHeight; // <-- OUTCOMMIT THIS FOR FIXED HEADER
+
+	@if $__useFixedHeader {
+		position: fixed;
+		& + .container--list {
+			padding-top: $__headerHeight;
+		}
+	}
+	@else {
+		position: absolute;
+		& + .container--list {
+			padding-top: 0;
+			& > .container:first-child {
+				padding-top: $__headerHeight;
+			}
 		}
 	}
 }
@@ -145,4 +154,9 @@ $__headerHeight--mobile: 70px;
 	height: 100%;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.container--superpadding {
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
