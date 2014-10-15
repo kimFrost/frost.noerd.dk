@@ -1,0 +1,85 @@
+
+/* Grid
+---------------------------------------------------------------*/
+
+$__gridSize: 24;
+//$__gridSpacing: 15px;
+$__gridSpacing: 10px;
+
+$__blockName: 'grid';
+
+@include block($__blockName) {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+	min-height: 1px;
+	position: relative;
+	width: 100%;
+	@include m(spaceright){
+		padding-right: $__gridSpacing;
+		@include mediaQueries(tablet){
+			padding-right: 0;
+			padding-bottom: $__gridSpacing;
+		}
+		@include mediaQueries(mobile){
+			padding-right: 0;
+			padding-bottom: $__gridSpacing;
+		}
+	}
+	@include m(spaceleft){
+		padding-left: $__gridSpacing;
+		@include mediaQueries(tablet){
+			padding-left: 0;
+			padding-top: $__gridSpacing;
+		}
+		@include mediaQueries(mobile){
+			padding-left: 0;
+			padding-top: $__gridSpacing;
+		}
+	}
+	@include m(spacebottom) {
+		margin-bottom: $__gridSpacing;
+	}
+	@include m(spacetop) {
+		margin-top: $__gridSpacing;
+	}
+	@include m(alignright) {
+		text-align: right;
+	}
+	@include m(aligncenter) {
+		text-align: center;
+	}
+	@for $i from 1 through $__gridSize {
+		@include m(#{$i}) {
+			width: 100% / $__gridSize * $i;
+		}
+	}
+	@include mediaQueries(tablet){
+		$__gridSizeNew: 12;
+		@for $i from 1 through $__gridSize {
+			@include m(#{$i}) {
+				$__scale: $__gridSize / $__gridSizeNew;
+				$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
+				@if $__newWidth > 100% {
+					$__newWidth: 100%;
+				}
+				width: $__newWidth;
+			}
+		}
+	};
+	@include mediaQueries(mobile){
+		$__gridSizeNew: 6;
+		@for $i from 1 through $__gridSize {
+			@include m(#{$i}) {
+				$__scale: $__gridSize / $__gridSizeNew;
+				$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
+				@if $__newWidth > 100% {
+					$__newWidth: 100%;
+				}
+				width: $__newWidth;
+			}
+		}
+	};
+}
+

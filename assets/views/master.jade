@@ -1,0 +1,23 @@
+doctype html
+html(data-ng-app="tilbudswizard", lang="da")
+	head
+		title Nörd
+		meta(charset="UTF-8")
+		//meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1 user-scalable=no")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='./css/main.css')
+		// Main app js
+		//script(src='./scripts/tilbudswizard_head.js')
+		block head
+		// Fonts
+		link(type="text/css", rel='stylesheet', href='http://fast.fonts.com/cssapi/ba002805-f090-46ee-884b-859604968980.css')
+
+	body
+		block glovalVars
+		block body
+		section.noerd(data-ng-controller="NoerdCtrl")
+
+			block content
+
+
+		//script(src='./scripts/tilbudswizard.js')

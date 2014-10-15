@@ -1,0 +1,599 @@
+@charset "UTF-8";
+/* Sprite Setup */
+/* Global Variables */
+/* Global mediaQueries mixin */
+/* Global font type */
+/* Global font Calculation */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000395}}
+html {
+  font-size: 112.5% !important;
+}
+
+/* OLD */
+/* Extend List */
+/* Global colorset loop */
+/* Global List Functions */
+/* Global Mixins */
+/**-------- removeMapItemByName --------**/
+/**-------- constructSelector --------**/
+/**-------- block --------**/
+/**-------- element --------**/
+/**-------- modifier --------**/
+/**-------- checkExtender --------**/
+/**-------- enableExtendMode --------**/
+/**-------- disableExtendMode --------**/
+/**-------- eEx --------**/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\000033}}
+.noerd {
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\000037}}
+.noerd {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\000034}}
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: bisque;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000311}}
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000318}}
+.container,
+.container__inner,
+.container__content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000328}}
+.container__inner {
+  position: relative;
+  width: 100%;
+  background-color: gold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000331}}
+.container__inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000341}}
+.container__content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: goldenrod;
+}
+@media all and (min-width: 620px) and (max-width: 1020px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000341}}
+  .container__content {
+    width: 560px;
+  }
+}
+@media all and (min-width: 1021px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000341}}
+  .container__content {
+    width: 960px;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000360}}
+.container__content--full {
+  width: 100%;
+}
+
+/*CACTUSPILOT:OPEN*/
+/*MODULE:OPEN*/
+               /*
+icon
+*/
+/*MODULE:CLOSE*/
+/*DESC:OPEN*/
+             /*
+This is a "icon" module.
+*/
+/*DESC:CLOSE*/
+/*MARKUP:OPEN*/
+               /*
+<div class="icon">
+	<div class="icon__item"></div>
+</div>
+*/
+/*MARKUP:CLOSE*/
+/*CACTUSPILOT:CLOSE*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?") format("woff"), url("../fonts/fontawesome-webfont.ttf?") format("truetype"), url("../fonts/fontawesome-webfont.svg?#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\0000367}}
+[class*="icon--"] {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\0000375}}
+[class*="icon--"]:before {
+  display: block;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\0000397}}
+.icon--arrowbottom:before {
+  content: "\f063";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003102}}
+.icon--longarrowbottom:before {
+  content: "\f175";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003107}}
+.icon--alignJustify:before {
+  content: "\f039";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003112}}
+.icon--heartO:before {
+  content: "\f08a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003117}}
+.icon--angleDown:before {
+  content: "\f107";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003122}}
+.icon--angleUp:before {
+  content: "";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003127}}
+.icon--arrowleft:before {
+  content: "\f060";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003132}}
+.icon--arrowright:before {
+  content: "\f061";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003137}}
+.icon--chevronleft:before {
+  content: "\f053";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003142}}
+.icon--chevronright:before {
+  content: "\f054";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003147}}
+.icon--times:before {
+  content: "\f00d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003152}}
+.icon--searchPlus:before {
+  content: "\f00e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003157}}
+.icon--eye:before {
+  content: "\f06e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003162}}
+.icon--eraser:before {
+  content: "\f12d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003167}}
+.icon--question:before {
+  content: "\f128";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003172}}
+.icon--check:before {
+  content: "\f00c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\000034}}
+.spacer {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 19px;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000312}}
+.spacer {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000318}}
+.spacer--line {
+  background-color: #cccccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000322}}
+.spacer--headline {
+  height: auto;
+  background-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.spacer--headline {
+  font-size: 24px;
+  font-size: 1.3333333333rem;
+  line-height: 24px;
+  line-height: 1.3333333333rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000326}}
+.spacer--headline:after {
+  content: "";
+  margin-top: 3px;
+  height: 1px;
+  display: block;
+  width: 100%;
+  background-color: #cccccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--alpha {
+  font-size: 11px;
+  font-size: 0.6111111111rem;
+  line-height: 11px;
+  line-height: 0.6111111111rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--beta {
+  font-size: 12px;
+  font-size: 0.6666666667rem;
+  line-height: 12px;
+  line-height: 0.6666666667rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--gamma {
+  font-size: 14px;
+  font-size: 0.7777777778rem;
+  line-height: 14px;
+  line-height: 0.7777777778rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--jimmi {
+  font-size: 15px;
+  font-size: 0.8333333333rem;
+  line-height: 15px;
+  line-height: 0.8333333333rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--delta {
+  font-size: 16px;
+  font-size: 0.8888888889rem;
+  line-height: 16px;
+  line-height: 0.8888888889rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--epsilon {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 18px;
+  line-height: 1rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--zeta {
+  font-size: 21px;
+  font-size: 1.1666666667rem;
+  line-height: 21px;
+  line-height: 1.1666666667rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--eta {
+  font-size: 24px;
+  font-size: 1.3333333333rem;
+  line-height: 24px;
+  line-height: 1.3333333333rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--theta {
+  font-size: 32px;
+  font-size: 1.7777777778rem;
+  line-height: 32px;
+  line-height: 1.7777777778rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--iota {
+  font-size: 48px;
+  font-size: 2.6666666667rem;
+  line-height: 48px;
+  line-height: 2.6666666667rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.fontsize--kappa {
+  font-size: 64px;
+  font-size: 3.5555555556rem;
+  line-height: 64px;
+  line-height: 3.5555555556rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_minwidth\.scss}line{font-family:\000033}}
+.minwidth {
+  min-width: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_minwidth\.scss}line{font-family:\000037}}
+.minwidth--20 {
+  min-width: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_minwidth\.scss}line{font-family:\0000311}}
+.minwidth--30 {
+  min-width: 20px;
+}
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\000035}}
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000313}}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000318}}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000323}}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000328}}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000337}}
+img {
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000341}}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000347}}
+textarea {
+  resize: vertical;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000351}}
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\0000396}}
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003103}}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003110}}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003115}}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003126}}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003136}}
+.invisible {
+  visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003140}}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003146}}
+.clearfix:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003150}}
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003159}}
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003166}}
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003171}}
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003175}}
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003183}}
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003189}}
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003195}}
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003199}}
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003204}}
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003212}}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_boilerplate\.scss}line{font-family:\00003219}}
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_pollutions\.scss}line{font-family:\000031}}
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_pollutions\.scss}line{font-family:\000035}}
+a {
+  color: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,24 @@
+
+
+
+.power {
+	@include fontSize(zeta);
+	position: relative;
+}
+
+.power,
+.power__box {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.power__box {
+	@include fontSize(gamma);
+	position: absolute;
+	top: 5%;
+	right: 2%;
+	color: $color_textblack;
+}
+
+

@@ -1,0 +1,62 @@
+
+$__gutterWidth: 20px;
+
+.container {
+    width: 100%;
+	padding-right: $__gutterWidth;
+	padding-left: $__gutterWidth;
+    @include onlyInDebug() {
+		background-color: bisque;
+	}
+    &:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.container,
+.container__inner,
+.container__content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+// ELEMENTS
+
+.container__inner {
+    position: relative;
+	width: 100%;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	@include onlyInDebug() {
+		background-color: gold;
+	}
+}
+
+.container__content { 
+    width: $contentWidth;
+	margin: 0 auto;
+    @include mediaQueries(tablet){
+		width: $contentWidth;
+	};
+	@include mediaQueries(desktop){
+		width: $contentWidth;
+	};
+	@include mediaQueries(mobile){
+		//width: $contentWidth;
+	};
+	@include onlyInDebug() {
+		background-color: goldenrod;
+	}
+}
+
+// MODIFIERS
+
+.container__content--full {
+    width: 100%;
+}

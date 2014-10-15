@@ -1,0 +1,257 @@
+
+
+$_lightboxWidth: 884px;
+$_lightboxHeight: 552px;
+$_lightboxPadding: 6px;
+$_lightboxHeaderHeight: 38px;
+$_lightboxIconBoxHeight: 32px;
+$_lightboxIconBulletSize: 12px;
+
+.lightbox {
+	@include translate(-100%,-100%);
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.lightbox,
+.lightbox__bg,
+.lightbox__box,
+.lightbox__header,
+.lightbox__close,
+.lightbox__view,
+.lightbox__slide,
+.lightbox__arrow,
+.lightbox__map {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.lightbox__bg {
+	@include transition(opacity 300ms ease);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color_black, 0.85);
+	z-index: -1;
+	opacity: 0;
+}
+
+.lightbox__box {
+	@include transition(transform 300ms ease);
+	@include border-radius(2px, 2px, 2px, 2px);
+	@include translate(-130%, 0%);
+	//@include scale(0);
+	display: block;
+	width: $_lightboxWidth;
+	height: $_lightboxHeight;
+	background: $color_lightgrey;
+	z-index: 50;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -($_lightboxWidth / 2);
+	margin-top: -($_lightboxHeight / 2);
+	padding: $_lightboxPadding;
+	overflow: hidden;
+}
+
+.lightbox__header {
+	display: block;
+	widows: 100%;
+	height: $_lightboxHeaderHeight;
+}
+
+.lightbox__close {
+	@include noUserSelect();
+	@include fontSize(delta, 0);
+	@include border-radius(2px, 2px, 2px, 2px);
+	display: block;
+	height: $_lightboxIconBoxHeight;
+	width: $_lightboxIconBoxHeight;
+	background-color: $color_smoke;
+	color: $color_white;
+	float: right;
+	cursor: pointer;
+	line-height: $_lightboxIconBoxHeight;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	&:active {
+		background-color: darken($color_smoke, 15%);
+	}
+}
+
+.lightbox__view {
+	display: block;
+	background-color: $color_white;
+	position: relative;
+	width: 100%;
+	border: 1px solid $color_grey;
+	height: ($_lightboxHeight - $_lightboxHeaderHeight - ($_lightboxPadding * 2));
+	overflow: hidden;
+
+	&:active {
+		cursor: move;
+	}
+}
+
+.lightbox__slide {
+	@include noUserSelect();
+	@include transition(transform 300ms ease);
+	@include translate(-100%, 0%);
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	img {
+		@include noUserSelect();
+	}
+}
+
+.lightbox__arrow {
+	@include noUserSelect();
+	@include fontSize(beta, 0);
+	@include border-radius(2px, 2px, 2px, 2px);
+	display: block;
+	height: $_lightboxIconBoxHeight;
+	width: $_lightboxIconBoxHeight;
+	background-color: $color_smoke;
+	position: absolute;
+	top: 50%;
+	left: $_lightboxPadding;
+	margin-top: -($_lightboxIconBoxHeight / 2);
+	color: $color_white;
+	cursor: pointer;
+	line-height: $_lightboxIconBoxHeight;
+	z-index: 60;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	&:active {
+		background-color: darken($color_smoke, 15%);
+}
+}
+
+.lightbox__map {
+	position: absolute;
+	bottom: ($_lightboxPadding * 2);
+	width: 100%;
+	text-align: center;
+	z-index: 60;
+}
+
+.lightbox__mapitem {
+	@include noUserSelect();
+	@include border-radius(50%, 50%, 50%, 50%);
+	background-color: $color_grey;
+	display: inline-block;
+	height: $_lightboxIconBulletSize;
+	width: $_lightboxIconBulletSize;
+	cursor: pointer;
+	& + & {
+		margin-left: 3px;
+	}
+}
+
+// Modifiers
+.lightbox--show {
+	@include translate(0%,0%);
+	z-index: 80;
+	.lightbox__bg {
+		opacity: 1;
+	}
+	.lightbox__box {
+		@include translate(0%, 0%);
+		@include scale(1);
+	}
+}
+
+.lightbox--animating {
+	@include translate(0%,0%);
+	z-index: 80;
+}
+
+.lightbox__arrow--right {
+	left: auto;
+	right: $_lightboxPadding;
+}
+
+.lightbox__arrow--disabled {
+	opacity: 0.3;
+	&:active {
+		background-color: $color_smoke;
+	}
+}
+
+.lightbox__mapitem--active {
+	background-color: $color_smoke;
+}
+
+.lightbox__slide--animating {
+
+}
+
+.lightbox__slide--active {
+	@include translate(0%, 0%);
+	z-index: 55;
+}

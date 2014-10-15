@@ -1,0 +1,52 @@
+
+$__blockName: 'color';
+
+
+@include block($__blockName) {
+	color: inherit;
+	// Colors
+	@include m(blue) {
+		color: $color_babyblue;
+		@include m(bg) {
+			background-color: $color_babyblue;
+			//color: $color_textblack;
+			color: $color_textdarkgray;
+		}
+	}
+	@include m(lightgray) {
+		color: $color_lightgray;
+		@include m(bg) {
+			background-color: $color_lightgray;
+			color: $color_textblack;
+		}
+	}
+	@include m(darkgray) {
+		color: $color_textdarkgray;
+		@include m(bg) {
+			background-color: $color_textdarkgray;
+			color: $color_textwhite;
+		}
+	}
+	@include m(black) {
+		color: $color_black;
+		@include m(bg) {
+			background-color: $color_black;
+			color: $color_textwhite;
+		}
+	}
+	@include m(lagoon) {
+		color: $color_lagoonblue;
+		@include m(bg) {
+			background-color: $color_lagoonblue;
+			color: $color_textwhite;
+		}
+	}
+	@include m(superlightgray) {
+		color: $color_superlightgray;
+		@include m(bg) {
+			background-color: $color_superlightgray;
+			color: $color_textblack;
+		}
+	}
+}
+

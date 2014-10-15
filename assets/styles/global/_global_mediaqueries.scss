@@ -1,0 +1,32 @@
+
+/* Global mediaQueries mixin */
+
+@mixin mediaQueries($type) {
+	@if $useAdaptive == true {
+		$type: unquote($type);
+		@for $i from 1 through length($type) {
+			$_type: nth($type, $i);
+			@for $i from 1 through length($mediaQueries) {
+				$dimension : nth($mediaQueries,$i);
+				$dimensionType : nth($dimension,1);
+				@if $dimensionType == $_type {
+					@if length($dimension) == 3 {
+						$contentWidth: nth(nth($mediaQueriesContentWidths, $i), 2) !global;
+						@media all and (min-width: nth($dimension,2)) and (max-width: nth($dimension,3)) {
+							@content;
+						}
+					}
+					@else if length($dimension) == 2 {
+						$contentWidth: nth(nth($mediaQueriesContentWidths, $i), 2) !global;
+						@media all and (min-width: nth($dimension,2)) {
+							@content;
+						}
+					}
+				}
+			}
+		}
+		@include resetContentWidth(); // Reset content width back to default
+	}
+}
+
+

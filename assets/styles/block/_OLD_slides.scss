@@ -1,0 +1,91 @@
+
+$_slidesArrowWidth: 50px;
+$_slidesArrowHeight: 47px;
+
+
+.slides {
+	@include noUserSelect();
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+
+	-webkit-transform: translateZ(0);
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+}
+
+.slides,
+.slides__slide,
+.slides__arrow,
+.slides__list {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.slides__list {
+	@include transition(transform 300ms ease);
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.slides__slide {
+	@include noUserSelect();
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.slides__arrow {
+	@include fontSize(iota);
+	@include hoverActiveStates($color_coal, 'color', 25%);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	opacity: 0.8;
+	height: $_slidesArrowHeight;
+	width: $_slidesArrowWidth;
+	margin-left: -($_slidesArrowWidth/2);
+	background-color: $color_white;
+	z-index: 40;
+	text-align: center;
+	cursor: pointer;
+}
+
+.slides__dev {
+	@include fontSize(beta);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	background: $color_coal;
+	color: darkred;
+	overflow: hidden;
+	padding: 5px;
+	z-index: 20;
+}
+
+.slides--noanimate {
+	.slides__list {
+		@include transition(none);
+	}
+}
+
+.slides__slide--category {
+	background-color: darkorange;
+	display: none;
+}

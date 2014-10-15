@@ -1,0 +1,76 @@
+@using noerd.Web.Helpers
+@inherits UmbracoTemplatePage
+@{
+  Layout = null;
+  bool isDebuggingEnabled = HttpContext.Current.IsDebuggingEnabled;
+}
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  @if (isDebuggingEnabled)
+  {
+    <!-- build:css(../) css/libs.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(../) css/main.min.css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+  }
+  else
+  {
+    <link rel="stylesheet" href="/css/libs.min.css?v=@VersionHelper.DateLabel" /> 
+    <link rel="stylesheet" href="/css/main.min.css?v=@VersionHelper.DateLabel">
+  }
+
+</head>
+<body ng-app="frost noerd dk">
+
+  <div class="wrapper">
+    <h1>Hello World From:
+      <br />
+      @Request.Url.AbsoluteUri</h1>
+    <span class="util"></span>
+    <span class="icon"></span>
+	<article data-ng-include="'/templates/main.html'"></article>
+  </div>
+
+  @if (isDebuggingEnabled)
+  {
+    <!-- build:js(../) scripts/ie-shim.min.js -->
+    <!--[if lt IE 9]>
+      <script src="/assets/bower_components/es5-shim/es5-shim.js"> </script>
+      <script src="/assets/bower_components/json3/lib/json3.min.js"> </script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(../) scripts/libs.min.js -->
+    <!-- bower:js -->
+    <script src="/assets/bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,../}) scripts/scripts.min.js -->
+    <script src="/assets/scripts/app.js"> </script>
+    <script src="/assets/scripts/controllers/main.js"> </script>
+    <!-- endbuild -->
+  }
+  else
+  {
+    <!--[if lt IE 9]>
+      <script src="/Scripts/ie-shim.min.js?v=@VersionHelper.DateLabel"> </script>
+    <![endif]-->
+
+    <script src="/Scripts/libs.min.js?v=@VersionHelper.DateLabel"> </script>
+    <script src="/Scripts/scripts.min.js?v=@VersionHelper.DateLabel"> </script>
+  }
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+$_imagelistItemsPerLine: 6;
+$_imagelistItemSpacing: 8px;
+$_imagelistItemHeight: 90px;
+
+$_imagelistScalePadding: 10px;
+
+
+.imagelist {
+	display: block;
+	width: 100%;
+	margin-bottom: -$_imagelistItemSpacing;
+	//overflow: hidden;
+	padding-top: $_imagelistScalePadding;
+	padding-bottom: $_imagelistScalePadding;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.imagelist,
+.imagelist__list,
+.imagelist__item,
+.imagelist__inner {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.imagelist__list {
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-right: -$_imagelistItemSpacing;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.imagelist__item {
+	display: block;
+	float: left;
+	width: (100%/$_imagelistItemsPerLine);
+	//overflow: hidden;
+	padding-right: $_imagelistItemSpacing;
+	padding-bottom: $_imagelistItemSpacing;
+	position: relative;
+	height: ($_imagelistItemHeight + $_imagelistItemSpacing);
+	z-index: 10;
+	&:hover {
+		@include scale(120%);
+	}
+}
+
+.imagelist__inner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	//background-color: red;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	border: 1px solid $color_white;
+	background-color: $color_white;
+}
+
+.imagelist__item--active {
+	@include scale(1.15, 1.15);
+	z-index: 20;
+	.imagelist__inner {
+		@include box-shadow(0px 0px 4px rgba($color_textblack, 0.4));
+		//background-color: greenyellow;
+	}
+}
+
+.imagelist__item--category {
+	@include scale(1, 1);
+	.imagelist__inner {
+		@include box-shadow(none);
+	}
+}

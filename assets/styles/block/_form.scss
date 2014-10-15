@@ -1,0 +1,65 @@
+
+
+
+.form {
+	display: block;
+	width: 100%;
+	position: relative;
+	// Before is used as a overlay for disable focus
+	&:before {
+		content: "";
+		display: none;
+		background-color: transparent;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 30;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.form,
+.form__input {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+// Elements
+
+.form__input {
+	@include border-radius(3px, 3px, 3px, 3px);
+	@include fontSize(delta, 0);
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 10px 13px;
+	outline: none;
+	position: relative;
+	border: 1px solid $color_grey;
+
+	&.ng-dirty {
+		&.ng-invalid {
+			border-color: $color_error;
+		}
+		&.ng-valid {
+			//border-color: green;
+		}
+	}
+}
+
+
+// Modifiers
+
+.form--pending {
+	opacity: 0.4;
+	&:before {
+		display: block;
+	}
+}

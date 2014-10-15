@@ -1,0 +1,37 @@
+
+.headline {
+	display: block;
+	background-color: $color_black;
+	color: $color_textwhite;
+	float: left;
+	//padding: 4px 8px;
+	padding: 4px 8px 6px 8px;
+	margin-top: 0;
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+	text-transform: uppercase;
+	& + & {
+		margin-top: 2px;
+		clear: both;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	&::first-line {
+
+	}
+}
+
+.headline,
+.headline__line {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+.headline--coal {
+	background-color: $color_coal;
+}

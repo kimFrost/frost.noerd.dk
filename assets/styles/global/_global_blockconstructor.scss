@@ -1,0 +1,460 @@
+
+// Block Element Modifier Constructor v0.1.1
+
+// Todo
+//- Convert blockNameList to map instead of list
+//- Block with tag prefix and store in blockNameList
+
+$_blockNameList: () !global;
+$_blockName: "" !global;
+$_constructorMap: () !global;
+$extendMode: false !global;
+$extendModePoints: () !global;
+$_blockSelectorMap: () !global;
+
+/**-------- removeMapItemByName --------**/
+@function removeMapItemByName($map, $name:false) {
+	//@debug "removeMapItemByName";
+	//@debug length($map);
+	$newMap: ();
+	@if $name != false and length($map) > 0 {
+		// Run through map and append item to newmap if their key:name doesn't match
+		@for $i from 1 through length($map) {
+			$_map: nth($map, $i);
+			$mapName: map-get($_map, name);
+			@if $mapName != $name {
+				//@debug "Add This:" + $name;
+				$newMap: append($newMap, $_map);
+			}
+			@else {
+				//@debug "Remove This: " + $name;
+			}
+		}
+		//@debug length($newMap);
+		@return $newMap
+	}
+	@return $map;
+}
+
+
+
+
+/**-------- constructSelector --------**/
+@function constructSelector() {
+	$selectorResult: "";
+	$returnParent: false;
+
+	//@debug $_constructorMap;
+
+	$prevType: ""; // Used for storing type data from pass to pass
+	$lastElemOrBlockSelector: ""; // Used to have information regarding spacing or not
+	@for $i from 1 through length($_constructorMap) {
+		$itemMap: nth($_constructorMap, $i);
+
+		$itemMapName: map-get($itemMap, name);
+		$itemMapType: map-get($itemMap, type);
+		$itemMapParent: map-get($itemMap, parent);
+		$itemMapPrefix: map-get($itemMap, prefix);
+		@if $itemMapPrefix == null {
+			$itemMapPrefix: "";
+		}
+
+		$prevRenderedType: "";
+		$isBlock: false;
+		$isElem: false;
+		$isModifer: false;
+
+		@if $itemMapType == "element" {
+			//@debug "----- > is element";
+			$isElem: true;
+		}
+		@else if $itemMapType == "block" {
+			//@debug "----- > is block";
+			$isBlock: true;
+		}
+		@else if $itemMapType == "modifier" {
+			//@debug "----- > is modifier";
+			$isModifer: true;
+		}
+
+		// Prev is Modifier state
+		$prevIsModifier: false;
+		@if $prevType == "modifier" {
+			$prevIsModifier: true;
+		}
+		@else {
+			$prevIsModifier: false;
+		}
+
+		// Prev is Element state
+		$prevIsElem: false;
+		@if $prevType == "element" {
+			$prevIsElem: true;
+		}
+		@else {
+			$prevIsElem: false;
+		}
+
+		// Prev is Block state
+		$prevIsBlock: false;
+		@if $prevType == "block" {
+			$prevIsBlock: true;
+		}
+		@else {
+			$prevIsBlock: false;
+		}
+
+		// Check for pseudo classes
+		$isPseudoClass: false;
+		$isPseudoHover: false;
+		$isPseudoActive: false;
+		$isPseudoBefore: false;
+		$isPseudoAfter: false;
+		@if $itemMapName == ":hover" {
+			$isPseudoHover: true;
+			$isPseudoClass: true;
+		}
+		@if $itemMapName == ":active" {
+			$isPseudoActive: true;
+			$isPseudoClass: true;
+		}
+		@if $itemMapName == ":before" {
+			$isPseudoBefore: true;
+			$isPseudoClass: true;
+		}
+		@if $itemMapName == "::before" {
+			$isPseudoBefore: true;
+			$isPseudoClass: true;
+		}
+		@if $itemMapName == ":after" {
+			$isPseudoAfter: true;
+			$isPseudoClass: true;
+		}
+		@if $itemMapName == "::after" {
+			$isPseudoAfter: true;
+			$isPseudoClass: true;
+		}
+
+		// If prev is modifier and current is element, append a space in selector
+		@if $prevIsModifier == true {
+			@if $isElem == true {
+				$selectorResult: $selectorResult + " ";
+			}
+		}
+
+		// Set parent
+		$returnParent: $lastElemOrBlockSelector;
+
+		// Construct selector from current information
+		@if $isBlock == true and length($_constructorMap) == 1 {
+			$selectorResult: "."+ $itemMapName;
+			$lastElemOrBlockSelector: "."+ $itemMapName;
+		}
+		@if $isBlock == true and length($_constructorMap) > 1 {
+			$lastElemOrBlockSelector: "."+ $itemMapName;
+		}
+		@if $isElem == true and length($_constructorMap) > 1 {
+			$lastElemOrBlockSelector: $itemMapPrefix + "." + $_blockName + "__" + $itemMapName;
+		}
+		@if $isModifer == true and $isPseudoClass == false and length($_constructorMap) > 1 {
+			$selectorResult: $selectorResult + $lastElemOrBlockSelector + "--" + $itemMapName + "";
+			$returnParent: $lastElemOrBlockSelector;
+		}
+		@if $isModifer == true and $isPseudoClass == true and length($_constructorMap) > 1 {
+			$selectorResult: $selectorResult + $lastElemOrBlockSelector + $itemMapName + "";
+			$returnParent: $lastElemOrBlockSelector;
+		}
+		@if $isElem == true and $i == length($_constructorMap) {
+			$selectorResult: $selectorResult + $itemMapPrefix + "." + $_blockName + "__" + $itemMapName;
+			$lastElemOrBlockSelector: $itemMapPrefix + "." + $_blockName + "__" + $itemMapName;
+		}
+
+		// Set states for next pass
+		@if $isBlock == true {
+			$prevType: "block";
+		}
+		@if $isModifer == true {
+			$prevType: "modifier";
+		}
+		@if $isElem == true {
+			$prevType: "element";
+		}
+
+	}
+
+	$selectorResultList: ();
+	$selectorResultList: append($selectorResultList, $selectorResult);
+	$selectorResultList: append($selectorResultList, $returnParent);
+	@return $selectorResultList;
+}
+
+
+
+
+
+/**-------- block --------**/
+@mixin block($name, $tag:"") {
+	$name: unquote($name);
+	$_blockName: $name !global; // Ugly
+	// Reset
+	$_constructorMap: () !global;
+
+	// If block already has been created
+	$_found: false;
+	@if $tag == "" and index($_blockNameList, $_blockName) != false and index($_blockNameList, $_blockName) != null  {
+		$_found: true;
+	}
+	// If created, throw and debug message
+	@if $_found {
+		@debug ("---------------------!!!---------------------");
+		@debug ("--> Block namespacing conflict at (#{$name}) <--");
+		@debug ("---------------------!!!---------------------");
+	}
+	@else {
+		// Add self to construction map
+		$_block: (name:$_blockName, type:"block", parent:false, tag:$tag);
+		$_constructorMap: append($_constructorMap, $_block) !global;
+
+		/** THIS MIGHT NEED TO BE CHANGED (BEGIN) **/
+		$_extenterMap: checkExtender($_block);
+
+		@if $extendMode {
+			@if length($_extenterMap) > 0 {
+				@at-root #{$tag}.#{$_blockName} {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+			}
+			@at-root %UNDEFINED {
+				@content;
+			}
+		}
+		@else {
+			@at-root #{$tag}.#{$_blockName} {
+				@if length($_extenterMap) > 0 {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+				@content;
+			}
+		}
+		/** THIS MIGHT NEED TO BE CHANGED (END) **/
+
+
+		// Remove self from construction map
+		$_constructorMap: removeMapItemByName($_constructorMap, $_blockName) !global;
+		// Add self to list over created blocks
+		$_blockNameList: append($_blockNameList, $_blockName) !global;
+	}
+}
+
+
+
+
+
+
+/**-------- element --------**/
+//elements get appended with "__" and the $name
+@mixin e($name, $prefix: "") {
+	$name: unquote($name);
+
+	//@debug "element constructor";
+	//@debug $name;
+	//@debug length($name);
+
+	@for $i from 1 through length($name) {
+		$_name: nth($name, $i);
+
+		// Add self to construction map
+		$_elem: (name:$_name, type:"element", parent: "NOT SET", prefix:$prefix);
+		$_constructorMap: append($_constructorMap, $_elem) !global;
+
+		$selectorReturned: constructSelector();
+		$selector: nth($selectorReturned, 1);
+		$newParent: nth($selectorReturned, 2);
+		//$placeholder: $_name;
+
+		/** THIS MIGHT NEED TO BE CHANGED (BEGIN) **/
+		$_extenterMap: checkExtender($_elem);
+
+		@if $extendMode {
+			@if length($_extenterMap) > 0 {
+				@at-root #{$selector} {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+			}
+			@at-root %UNDEFINED {
+				@content;
+			}
+		}
+		@else {
+			@at-root #{$selector} {
+				@if length($_extenterMap) > 0 {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+				@content;
+			}
+		}
+		/** THIS MIGHT NEED TO BE CHANGED (END) **/
+
+		// Remove self from construction map
+		$_constructorMap: removeMapItemByName($_constructorMap, $_name) !global;
+	}
+}
+
+
+
+
+
+
+/**-------- modifier --------**/
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	$name: unquote($name);
+
+	@for $i from 1 through length($name) {
+		$_name: nth($name, $i);
+
+		// Add self to construction map
+		$_elem: (name:$_name, type:"modifier", parent: "NOT SET");
+		$_constructorMap: append($_constructorMap, $_elem) !global;
+
+		$selectorReturned: constructSelector();
+		$selector: nth($selectorReturned, 1);
+		$newParent: nth($selectorReturned, 2);
+		//$placeholder: $_name;
+
+		//@debug "---> Modifer";
+		//@debug "----->" + $selector;
+		//@debug $newParent;
+
+		/** THIS MIGHT NEED TO BE CHANGED (BEGIN) **/
+		$_extenterMap: checkExtender($_elem);
+
+		@if $extendMode {
+			@if length($_extenterMap) > 0 {
+				@at-root #{$selector} {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+			}
+			@at-root %UNDEFINED {
+				@content;
+			}
+		}
+		@else {
+			@at-root #{$selector} {
+				@if length($_extenterMap) > 0 {
+					@for $i from 1 through length($_extenterMap) {
+						$placeholder: nth($_extenterMap,$i);
+						@if map-has-key($placeholder, name) {
+							@extend %#{map-get($placeholder, name)} !optional;
+						}
+					}
+				}
+				@content;
+			}
+		}
+		/** THIS MIGHT NEED TO BE CHANGED (END) **/
+
+		// Remove self from construction map
+		$_constructorMap: removeMapItemByName($_constructorMap, $_name) !global;
+	}
+}
+
+
+
+
+/**-------- checkExtender --------**/
+@function checkExtender($_currentList) {
+
+	// This is not implemented or tested, at all!!
+
+	$_placeholderList: ();
+
+	$name: nth($_currentList, 1);
+	$type: nth($_currentList, 2);
+	$parent: nth($_currentList, 3);
+
+	@if length($extendModePoints) > 0 {
+		@for $i from 1 through length($extendModePoints) {
+
+			$extendModePoint: nth($extendModePoints,$i);
+			// block - elem/block, modifier, placeholderId
+			$pointBlock: nth($extendModePoint,1);
+			$pointElem: nth($extendModePoint,2);
+			$pointModifier: nth($extendModePoint,3);
+			$pointPlaceholder: nth($extendModePoint,4);
+
+			@if $pointBlock == $_blockName {
+				@if str_length($pointElem) > 0 and str_length($pointModifier) > 0 {
+					//@debug "-----> 1";
+					$_elemComparator: "." + $_blockName + "__" + $pointElem;
+					@if $pointModifier == $name and $parent == $_elemComparator {
+						//@debug "-Succes <------------";
+						$_placeholderList: append($_placeholderList, $pointPlaceholder);
+					}
+				}
+				@else if str_length($pointElem) > 0 {
+					//@debug "-----> 2";
+					@if $pointElem == $name {
+						//@debug "-Succes <------------";
+						$_placeholderList: append($_placeholderList, $pointPlaceholder);
+					}
+				}
+				@else if str_length($pointModifier) > 0 {
+					$_blockComparator: "." + $_blockName;
+					@if $pointModifier == $name and ($parent == false or $parent == $_blockComparator) {
+						//@debug "-----> 3";
+						//@debug "-Succes <------------";
+						$_placeholderList: append($_placeholderList, $pointPlaceholder);
+					}
+				}
+				@else {
+					$_blockComparator: "." + $name;
+					@if $parent == false or $parent == $_blockComparator {
+						$_placeholderList: append($_placeholderList, $pointPlaceholder);
+					}
+				}
+			}
+		}
+	}
+
+	@return $_placeholderList;
+}
+
+
+/**-------- enableExtendMode --------**/
+@mixin enableExtendMode() {
+	$extendMode: true !global;
+}
+/**-------- disableExtendMode --------**/
+@mixin disableExtendMode() {
+	$extendMode: false !global;
+}
+/**-------- eEx --------**/
+@mixin eEx($block: "", $elem: "", $modifier: "") {
+
+}

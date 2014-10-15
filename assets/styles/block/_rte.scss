@@ -1,0 +1,29 @@
+
+.rte {
+	display: block;
+	width: 100%;
+}
+
+.rte {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.rte p,
+.rte h1,
+.rte h2,
+.rte h3,
+.rte h4 {
+	margin-top: 0;
+}
+
+
+.rte p {
+	@include fontSize(delta, 1.2);
+}
+
+
+.rte h2 {
+	@include fontSize(epsilon, 1.2);
+}

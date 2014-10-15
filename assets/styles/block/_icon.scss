@@ -1,0 +1,176 @@
+
+$__blockName: 'icon';
+
+
+
+$__iconMap: (
+	glass: "\f000",
+	circle: "\f111",
+	arrowup: "\f062",
+	arrowright: "\f061",
+	arrowbottom: "\f063",
+	arrowleft: "\f060",
+	chevroncircledown: "\f13a",
+	chevroncircleleft: "\f137",
+	chevroncircleright: "\f138",
+	chevroncircleup: "\f139",
+	chevrondown: "\f078",
+	chevronleft: "\f053",
+	chevronright: "\f054",
+	chevronup: "\f077",
+	check: "\f00c",
+	checkcircle: "\f058",
+	timescircle: "\f057",
+	times: "\f00d",
+	question: "\f128",
+	questionCircle: "\f059",
+	circleONotch: "\f1ce",
+	search: "\f002",
+	alignJustify: "\f039",
+	heartO: "\f08a"
+);
+
+
+/*CACTUSPILOT:OPEN*/
+
+/*MODULE:OPEN*//*
+#{$__blockName}
+*//*MODULE:CLOSE*/
+
+/*DESC:OPEN*//*
+This is a "#{$__blockName}" module.
+*//*DESC:CLOSE*/
+
+/*MARKUP:OPEN*//*
+<div class="#{$__blockName}">
+	<div class="icon__item"></div>
+</div>
+*//*MARKUP:CLOSE*/
+
+/*CACTUSPILOT:CLOSE*/
+
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/fontawesome-webfont.woff?') format('woff'),
+	url('../fonts/fontawesome-webfont.ttf?') format('truetype'),
+	url('../fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
+	//src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.icon {
+	@at-root [class*="icon--"] {
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		&:before {
+			display: block;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+	}
+
+}
+
+// Sass 3.4 breaks this completely. Cannot get a single "/" compiled into a string.
+@each $key, $content in $__iconMap {
+	.icon--#{$key} {
+		&:before {
+			//display: block;
+			//content: $content;
+		}
+	}
+}
+
+
+// Manual codes until the sass thing is fixed
+.icon--arrowbottom {
+	&:before {
+		content: "\f063";
+	}
+}
+.icon--longarrowbottom {
+	&:before {
+		content: "\f175";
+	}
+}
+.icon--alignJustify {
+	&:before {
+		content: "\f039";
+	}
+}
+.icon--heartO {
+	&:before {
+		content: "\f08a";
+	}
+}
+.icon--angleDown {
+	&:before {
+		content: "\f107";
+	}
+}
+.icon--angleUp {
+	&:before {
+		content: "\f106"
+	}
+}
+.icon--arrowleft {
+	&:before {
+		content: "\f060";
+	}
+}
+.icon--arrowright {
+	&:before {
+		content: "\f061";
+	}
+}
+.icon--chevronleft {
+	&:before {
+		content: "\f053";
+	}
+}
+.icon--chevronright {
+	&:before {
+		content: "\f054";
+	}
+}
+.icon--times {
+	&:before {
+		content: "\f00d";
+	}
+}
+.icon--searchPlus {
+	&:before {
+		content: "\f00e";
+	}
+}
+.icon--eye {
+	&:before {
+		content: "\f06e";
+	}
+}
+.icon--eraser {
+	&:before {
+		content: "\f12d";
+	}
+}
+.icon--question {
+	&:before {
+		content: "\f128";
+	}
+}
+.icon--check {
+	&:before {
+		content: "\f00c";
+	}
+}
+

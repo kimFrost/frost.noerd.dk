@@ -1,0 +1,143 @@
+
+
+
+.product {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	& + & {
+		padding-top: 20px;
+		border-top: 1px solid $color_grey;
+	}
+}
+
+.product,
+.product__image,
+.product__wishlist,
+.product__desc {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+// Elements
+
+.product__image {
+	display: block;
+	float: left;
+	background-color: $color_white;
+	border: 1px solid $color_grey;
+	width: 235px;
+	//height: 235px;
+	height: 213px;
+	margin-right: 20px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-position: center center;
+	background-size: contain;
+	position: relative;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+
+	&:active {
+		.product__imageicon {
+			color: darken($color_grey, 15%);
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.product__imageicon {
+	//@include fontSize(theta);
+	@include fontSize(zeta);
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	display: none;
+	color: darken($color_grey, 5%);
+}
+
+.product__content {
+	overflow: hidden;
+}
+
+.product__wishlist {
+	@include fontSize(gamma);
+	display: block;
+	float: right;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-image: url(../images/wishlist.png);
+	min-height: image-height('../images/wishlist.png');
+	padding-left: (image-width('../images/wishlist.png') + 3px);
+	cursor: pointer;
+}
+
+
+.product__desc {
+	@include fontSize(jimmi, 1.4);
+}
+
+
+.product__interface {
+	@include fontSize(gamma);
+	display: block;
+	float: right;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+	& + & {
+		margin-right: 10px;
+	}
+}
+
+// Modifiers
+
+.product--tabhead {
+	.product__image {
+		height: auto;
+		background-color: transparent;
+	}
+}
+
+.product--tighter {
+	margin-bottom: 10px;
+	& + & {
+		padding-top: 10px;
+	}
+}
+
+.product__image--lightbox {
+	cursor: pointer;
+	.product__imageicon {
+		display: block;
+	}
+}
