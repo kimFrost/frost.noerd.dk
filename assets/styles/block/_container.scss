@@ -114,11 +114,6 @@ $__headerHeight--mobile: 70px;
 
 // MODIFIERS
 
-.container--partial {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-
 .container--fitscreen {
 	height: 100%;
 	min-height: $__fitScreenMinHeight;
@@ -128,4 +123,26 @@ $__headerHeight--mobile: 70px;
 
 .container__content--full {
     width: 100%;
+}
+
+.container--header {
+	top: 0;
+	left: 0;
+	z-index: 60;
+	height: $__headerHeight;
+	position: fixed;
+	position: absolute; // <-- OUTCOMMIT THIS FOR FIXED HEADER
+	& + .container--list {
+		padding-top: $__headerHeight;
+		padding-top: 0; // <-- OUTCOMMIT THIS FOR FIXED HEADER
+		& > .container:first-child {
+			padding-top: $__headerHeight; // <-- OUTCOMMIT THIS FOR FIXED HEADER
+		}
+	}
+}
+
+.container--list {
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
 }

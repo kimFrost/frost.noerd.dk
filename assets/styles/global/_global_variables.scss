@@ -15,22 +15,14 @@ $color_textblack: #000;
 $color_textwhite: #fff;
 
 $color_coal: #313131;
-
-
-
-
-
-
-
-
-$color_smoke: #404040;
-$color_sun: #ffd503;
-$color_grey: #cccccc;
-$color_lightgrey: #f0f0f0;
-$color_almostwhite: #f7f7f7;
-
-$color_error: #b73f2b;
-
+$color_heart: #ef4b54;
+$color_darkheart: #eb3e42;
+$color_grey: #777777;
+$color_lightgrey: #b3b3b3;
+$color_lightergrey: #ebebeb;
+$color_almostwhite: #f9f9f9;
+$color_babyblue: #59a9cc;
+$color_cyanblue: #127495;
 
 
 // Media Queries, Labels and Content widths
@@ -50,9 +42,6 @@ $mediaQueriesDefault: mobile;
 	}
 }
 @include resetContentWidth();
-
-
-
 
 
 

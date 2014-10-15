@@ -165,20 +165,40 @@ html {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003117}}
-.container--partial {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003122}}
 .container--fitscreen {
   height: 100%;
   min-height: 400px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003124}}
 .container__content--full {
   width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003128}}
+.container--header {
+  top: 0;
+  left: 0;
+  z-index: 60;
+  height: 100px;
+  position: fixed;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003135}}
+.container--header + .container--list {
+  padding-top: 100px;
+  padding-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003138}}
+.container--header + .container--list > .container:first-child {
+  padding-top: 100px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003144}}
+.container--list {
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /*CACTUSPILOT:OPEN*/
@@ -322,7 +342,7 @@ This is a "icon" module.
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000318}}
 .spacer--line {
-  background-color: #cccccc;
+  background-color: #777777;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\0000322}}
@@ -344,7 +364,7 @@ This is a "icon" module.
   height: 1px;
   display: block;
   width: 100%;
-  background-color: #cccccc;
+  background-color: #777777;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
