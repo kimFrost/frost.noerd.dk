@@ -1,12 +1,17 @@
 
+
+// PARAMETERS
 $__gutterWidth: 20px;
+$__fitScreenMinHeight: 400px;
 $__headerHeight: 100px;
 $__headerHeight--mobile: 70px;
 
+// BLOCK
 .container {
     width: 100%;
 	padding-right: $__gutterWidth;
 	padding-left: $__gutterWidth;
+	position: relative;
     @include onlyInDebug() {
 		background-color: bisque;
 		border-bottom: 1px solid darken(goldenrod, 10%);
@@ -113,6 +118,7 @@ $__headerHeight--mobile: 70px;
 
 .container--fitscreen {
 	height: 100%;
+	min-height: $__fitScreenMinHeight;
 	//padding-left: 0;
 	//padding-right: 0;
 }
