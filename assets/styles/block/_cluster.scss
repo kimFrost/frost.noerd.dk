@@ -1,0 +1,238 @@
+
+
+// For standard settings
+$cluster_item_per_line: 3;
+$cluster_item_spacing: 10px;
+$cluster_item_height: 100px;
+// Take in padding because of box-sizing:border-box
+$cluster_item_height: $cluster_item_height + $cluster_item_spacing;
+
+// For calculations
+$cluster_use_advanced: true;
+$cluster_min_items_per_line: 1;
+$cluster_max_items_per_line: 4;
+$cluster_min_item_height: 40px;
+$cluster_max_item_height: 200px;
+$cluster_item_height_cal_interval: 20px;
+$cluster_num_of_heigths: ($cluster_max_item_height - $cluster_min_item_height) / $cluster_item_height_cal_interval;
+
+// For mediaqueries
+$cluster_use_mediaqueries: true;
+
+
+.cluster {
+	width: 100%;
+	display: block;
+	margin-bottom: -$cluster_item_spacing;
+	overflow: hidden;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.cluster,
+.cluster__list,
+.cluster__item,
+.cluster__inner {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+//--- ELEMENTS --------------------------------------------------------------------//
+
+.cluster__list {
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-right: -$cluster_item_spacing;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.cluster__item {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100% / $cluster_item_per_line;
+	padding-right: $cluster_item_spacing;
+	padding-bottom: $cluster_item_spacing;
+	height: $cluster_item_height;
+	z-index: 1;
+	list-style-image: none;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.cluster__inner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	@include onlyInDebug() {
+		background-color: mediumvioletred;
+	}
+}
+
+//--- MODIFIERS --------------------------------------------------------------------//
+
+.cluster--spacebottom {
+	margin-bottom: 0;
+}
+
+.cluster--test {
+	background-color: red;
+}
+
+.cluster__item--1x2 {
+	height: $cluster_item_height * 2;
+	float: right; // temp fix
+}
+
+.cluster__item--1x3 {
+	height: $cluster_item_height * 3;
+	float: right; // temp fix
+}
+
+.cluster__item--1x4 {
+	height: $cluster_item_height * 4;
+	float: right; // temp fix
+}
+
+.cluster__item--2x1 {
+	width: 100% / $cluster_item_per_line * 2;
+}
+
+.cluster__item--3x1 {
+	width: 100% / $cluster_item_per_line * 3;
+}
+
+.cluster__item--4x1 {
+	width: 100% / $cluster_item_per_line * 4;
+}
+
+.cluster__item--2x2 {
+	width: 100% / $cluster_item_per_line * 2;
+	height: $cluster_item_height * 2;
+}
+
+.cluster__item--3x2 {
+	width: 100% / $cluster_item_per_line * 3;
+	height: $cluster_item_height * 2;
+}
+
+.cluster__item--4x2 {
+	width: 100% / $cluster_item_per_line * 4;
+	height: $cluster_item_height * 2;
+}
+
+.cluster__item--clear {
+	clear: both;
+	& + .cluster__item--2x2,
+	& + .cluster__item--2x3 {
+		float: none;
+		overflow: hidden;
+	}
+}
+
+
+
+// Generate width and height sizes for items per line
+.cluster {
+	@if $cluster_use_advanced == true {
+		// Widths
+		@if $cluster_max_items_per_line > $cluster_min_items_per_line {
+			@for $i from $cluster_min_items_per_line through $cluster_max_items_per_line {
+				&.cluster--line#{$i} {
+					.cluster__item {
+						width: 100% / $i;
+						// Modifiers
+						&.cluster__item--2x1,
+						&.cluster__item--2x2 {
+							width: 100% / $i * 2;
+						}
+						&.cluster__item--3x1,
+						&.cluster__item--3x2 {
+							width: 100% / $i * 3;
+						}
+						&.cluster__item--4x1,
+						&.cluster__item--4x2 {
+							width: 100% /  $i * 4;
+						}
+					}
+				}
+			}
+		}
+		// Heights
+		@for $i from 0 through $cluster_num_of_heigths {
+			$_height: $i * $cluster_item_height_cal_interval + $cluster_min_item_height;
+
+			$_height_no_px: $_height / ($_height * 0 + 1); // Convert to int
+
+			&.cluster--height#{$_height_no_px} {
+				.cluster__item {
+					height: $_height + $cluster_item_spacing;
+					&.cluster__item--1x3 {
+						height: $_height * 3 + $cluster_item_spacing * 3;
+					}
+					&.cluster__item--1x4 {
+						height: $_height * 4 + $cluster_item_spacing * 4;
+					}
+					&.cluster__item--1x2,
+					&.cluster__item--2x2,
+					&.cluster__item--3x2,
+					&.cluster__item--4x2 {
+						height: $_height * 2 + $cluster_item_spacing * 2;
+					}
+				}
+			}
+		}
+	}
+	@if $cluster_use_mediaqueries == true {
+		@include mediaQueries(tablet){
+			.cluster__item {
+				width: 100%;
+				&.cluster__item--1x1,
+				&.cluster__item--2x1,
+				&.cluster__item--1x2,
+				&.cluster__item--2x2 {
+					width: 100%;
+				}
+			}
+		}
+		@include mediaQueries(mobile){
+			.cluster__item {
+				width: 100%;
+				&.cluster__item--1x1,
+				&.cluster__item--2x1,
+				&.cluster__item--1x2,
+				&.cluster__item--2x2 {
+					width: 100%;
+				}
+			}
+		}
+
+	}
+	&.cluster--autoHeight {
+		.cluster__item {
+			height: auto;
+		}
+	}
+	&.cluster--mobilebreakall {
+		@include mediaQueries(mobile) {
+			.cluster__item {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
