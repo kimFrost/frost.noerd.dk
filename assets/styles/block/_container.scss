@@ -145,6 +145,9 @@ $__useFixedHeader: false;
 			padding-top: 0;
 			& > .container:first-child {
 				padding-top: $__headerHeight;
+				& > .container__bg {
+					top: $__headerHeight;
+				}
 			}
 		}
 	}
