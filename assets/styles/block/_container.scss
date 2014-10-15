@@ -1,5 +1,7 @@
 
 $__gutterWidth: 20px;
+$__headerHeight: 100px;
+$__headerHeight--mobile: 70px;
 
 .container {
     width: 100%;
@@ -7,6 +9,7 @@ $__gutterWidth: 20px;
 	padding-left: $__gutterWidth;
     @include onlyInDebug() {
 		background-color: bisque;
+		border-bottom: 1px solid darken(goldenrod, 10%);
 	}
     &:after {
 		content: "";
@@ -17,7 +20,9 @@ $__gutterWidth: 20px;
 
 .container,
 .container__inner,
-.container__content {
+.container__content,
+.container__bg,
+.container__header {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -55,7 +60,62 @@ $__gutterWidth: 20px;
 	}
 }
 
+.container__bg {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	//height: 100%;
+	& > a {
+		display: block;
+		text-decoration: none;
+		& > img {
+			display: block;
+			margin: 0;
+			border: none;
+			outline: none;
+		}
+	}
+	& > img {
+		display: block;
+		margin: 0;
+		border: none;
+		outline: none;
+	}
+}
+
+.container__header {
+	display: block;
+	height: $__headerHeight--mobile;
+	@include mediaQueries(desktop tablet) {
+		height: $__headerHeight;
+	}
+	@include onlyInDebug(){
+		background-color: lighten(goldenrod, 5%);
+	}
+	//& ~ .container__content,
+	& ~ .container__bg {
+		top: $__headerHeight--mobile;
+		@include mediaQueries(desktop tablet) {
+			top: $__headerHeight;
+		}
+	}
+}
+
 // MODIFIERS
+
+
+
+.container--fitscreen {
+	height: 100%;
+	//padding-left: 0;
+	//padding-right: 0;
+}
 
 .container__content--full {
     width: 100%;
