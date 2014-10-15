@@ -2,8 +2,8 @@
 
 // For standard settings
 $cluster_item_per_line: 3;
-$cluster_item_spacing: 10px;
-$cluster_item_height: 100px;
+$cluster_item_spacing: 20px;
+$cluster_item_height: 380px;
 // Take in padding because of box-sizing:border-box
 $cluster_item_height: $cluster_item_height + $cluster_item_spacing;
 
@@ -11,9 +11,9 @@ $cluster_item_height: $cluster_item_height + $cluster_item_spacing;
 $cluster_use_advanced: true;
 $cluster_min_items_per_line: 1;
 $cluster_max_items_per_line: 4;
-$cluster_min_item_height: 40px;
-$cluster_max_item_height: 200px;
-$cluster_item_height_cal_interval: 20px;
+$cluster_min_item_height: 50px;
+$cluster_max_item_height: 400px;
+$cluster_item_height_cal_interval: 50px;
 $cluster_num_of_heigths: ($cluster_max_item_height - $cluster_min_item_height) / $cluster_item_height_cal_interval;
 
 // For mediaqueries

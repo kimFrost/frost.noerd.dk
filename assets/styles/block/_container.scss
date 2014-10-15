@@ -114,7 +114,10 @@ $__headerHeight--mobile: 70px;
 
 // MODIFIERS
 
-
+.container--partial {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
 
 .container--fitscreen {
 	height: 100%;

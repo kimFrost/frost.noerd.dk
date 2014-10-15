@@ -23,14 +23,15 @@ html {
 /**-------- enableExtendMode --------**/
 /**-------- disableExtendMode --------**/
 /**-------- eEx --------**/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\000038}}
 .noerd {
   display: block;
   width: 100%;
   height: 100%;
+  font-family: 'Open Sans';
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_noerd\.scss}line{font-family:\0000315}}
 .noerd {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -83,16 +84,16 @@ html {
   margin: 0 auto;
   background-color: goldenrod;
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000351}}
   .container__content {
     width: 560px;
   }
 }
-@media all and (min-width: 1021px) {
+@media all and (min-width: 1289px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000351}}
   .container__content {
-    width: 960px;
+    width: 1248px;
   }
 }
 
@@ -134,13 +135,13 @@ html {
   height: 70px;
   background-color: #e1af33;
 }
-@media all and (min-width: 1021px) {
+@media all and (min-width: 1289px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000397}}
   .container__header {
     height: 100px;
   }
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000397}}
   .container__header {
     height: 100px;
@@ -150,26 +151,32 @@ html {
 .container__header ~ .container__bg {
   top: 70px;
 }
-@media all and (min-width: 1021px) {
+@media all and (min-width: 1289px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003107}}
   .container__header ~ .container__bg {
     top: 100px;
   }
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003107}}
   .container__header ~ .container__bg {
     top: 100px;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003117}}
+.container--partial {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003122}}
 .container--fitscreen {
   height: 100%;
   min-height: 400px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003129}}
 .container__content--full {
   width: 100%;
 }
@@ -467,7 +474,7 @@ This is a "icon" module.
 .grid--spaceright {
   padding-right: 10px;
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000329}}
   .grid--spaceright {
     padding-right: 0;
@@ -486,7 +493,7 @@ This is a "icon" module.
 .grid--spaceleft {
   padding-left: 10px;
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000341}}
   .grid--spaceleft {
     padding-left: 0;
@@ -641,7 +648,7 @@ This is a "icon" module.
   width: 100%;
 }
 
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
   .grid--1 {
     width: 8.3333333333%;
@@ -887,7 +894,7 @@ This is a "icon" module.
 .cluster {
   width: 100%;
   display: block;
-  margin-bottom: -10px;
+  margin-bottom: -20px;
   overflow: hidden;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\0000328}}
@@ -912,7 +919,7 @@ This is a "icon" module.
   display: block;
   padding: 0;
   margin: 0;
-  margin-right: -10px;
+  margin-right: -20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\0000351}}
 .cluster__list:after {
@@ -927,9 +934,9 @@ This is a "icon" module.
   display: block;
   float: left;
   width: 33.3333333333%;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  height: 110px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  height: 400px;
   z-index: 1;
   list-style-image: none;
 }
@@ -961,19 +968,19 @@ This is a "icon" module.
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\0000395}}
 .cluster__item--1x2 {
-  height: 220px;
+  height: 800px;
   float: right;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003100}}
 .cluster__item--1x3 {
-  height: 330px;
+  height: 1200px;
   float: right;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003105}}
 .cluster__item--1x4 {
-  height: 440px;
+  height: 1600px;
   float: right;
 }
 
@@ -995,19 +1002,19 @@ This is a "icon" module.
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003122}}
 .cluster__item--2x2 {
   width: 66.6666666667%;
-  height: 220px;
+  height: 800px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003127}}
 .cluster__item--3x2 {
   width: 100%;
-  height: 220px;
+  height: 800px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003132}}
 .cluster__item--4x2 {
   width: 133.3333333333%;
-  height: 220px;
+  height: 800px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003137}}
@@ -1085,150 +1092,134 @@ This is a "icon" module.
   width: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height40 .cluster__item {
-  height: 50px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height40 .cluster__item.cluster__item--1x3 {
-  height: 150px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height40 .cluster__item.cluster__item--1x4 {
-  height: 200px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height40 .cluster__item.cluster__item--1x2, .cluster.cluster--height40 .cluster__item.cluster__item--2x2, .cluster.cluster--height40 .cluster__item.cluster__item--3x2, .cluster.cluster--height40 .cluster__item.cluster__item--4x2 {
-  height: 100px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height60 .cluster__item {
+.cluster.cluster--height50 .cluster__item {
   height: 70px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height60 .cluster__item.cluster__item--1x3 {
+.cluster.cluster--height50 .cluster__item.cluster__item--1x3 {
   height: 210px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height60 .cluster__item.cluster__item--1x4 {
+.cluster.cluster--height50 .cluster__item.cluster__item--1x4 {
   height: 280px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height60 .cluster__item.cluster__item--1x2, .cluster.cluster--height60 .cluster__item.cluster__item--2x2, .cluster.cluster--height60 .cluster__item.cluster__item--3x2, .cluster.cluster--height60 .cluster__item.cluster__item--4x2 {
+.cluster.cluster--height50 .cluster__item.cluster__item--1x2, .cluster.cluster--height50 .cluster__item.cluster__item--2x2, .cluster.cluster--height50 .cluster__item.cluster__item--3x2, .cluster.cluster--height50 .cluster__item.cluster__item--4x2 {
   height: 140px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height80 .cluster__item {
-  height: 90px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height80 .cluster__item.cluster__item--1x3 {
-  height: 270px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height80 .cluster__item.cluster__item--1x4 {
-  height: 360px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height80 .cluster__item.cluster__item--1x2, .cluster.cluster--height80 .cluster__item.cluster__item--2x2, .cluster.cluster--height80 .cluster__item.cluster__item--3x2, .cluster.cluster--height80 .cluster__item.cluster__item--4x2 {
-  height: 180px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
 .cluster.cluster--height100 .cluster__item {
-  height: 110px;
+  height: 120px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
 .cluster.cluster--height100 .cluster__item.cluster__item--1x3 {
-  height: 330px;
+  height: 360px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
 .cluster.cluster--height100 .cluster__item.cluster__item--1x4 {
-  height: 440px;
+  height: 480px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
 .cluster.cluster--height100 .cluster__item.cluster__item--1x2, .cluster.cluster--height100 .cluster__item.cluster__item--2x2, .cluster.cluster--height100 .cluster__item.cluster__item--3x2, .cluster.cluster--height100 .cluster__item.cluster__item--4x2 {
-  height: 220px;
+  height: 240px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height120 .cluster__item {
-  height: 130px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height120 .cluster__item.cluster__item--1x3 {
-  height: 390px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height120 .cluster__item.cluster__item--1x4 {
-  height: 520px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height120 .cluster__item.cluster__item--1x2, .cluster.cluster--height120 .cluster__item.cluster__item--2x2, .cluster.cluster--height120 .cluster__item.cluster__item--3x2, .cluster.cluster--height120 .cluster__item.cluster__item--4x2 {
-  height: 260px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height140 .cluster__item {
-  height: 150px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height140 .cluster__item.cluster__item--1x3 {
-  height: 450px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height140 .cluster__item.cluster__item--1x4 {
-  height: 600px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height140 .cluster__item.cluster__item--1x2, .cluster.cluster--height140 .cluster__item.cluster__item--2x2, .cluster.cluster--height140 .cluster__item.cluster__item--3x2, .cluster.cluster--height140 .cluster__item.cluster__item--4x2 {
-  height: 300px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height160 .cluster__item {
+.cluster.cluster--height150 .cluster__item {
   height: 170px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height160 .cluster__item.cluster__item--1x3 {
+.cluster.cluster--height150 .cluster__item.cluster__item--1x3 {
   height: 510px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height160 .cluster__item.cluster__item--1x4 {
+.cluster.cluster--height150 .cluster__item.cluster__item--1x4 {
   height: 680px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height160 .cluster__item.cluster__item--1x2, .cluster.cluster--height160 .cluster__item.cluster__item--2x2, .cluster.cluster--height160 .cluster__item.cluster__item--3x2, .cluster.cluster--height160 .cluster__item.cluster__item--4x2 {
+.cluster.cluster--height150 .cluster__item.cluster__item--1x2, .cluster.cluster--height150 .cluster__item.cluster__item--2x2, .cluster.cluster--height150 .cluster__item.cluster__item--3x2, .cluster.cluster--height150 .cluster__item.cluster__item--4x2 {
   height: 340px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
-.cluster.cluster--height180 .cluster__item {
-  height: 190px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
-.cluster.cluster--height180 .cluster__item.cluster__item--1x3 {
-  height: 570px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
-.cluster.cluster--height180 .cluster__item.cluster__item--1x4 {
-  height: 760px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
-.cluster.cluster--height180 .cluster__item.cluster__item--1x2, .cluster.cluster--height180 .cluster__item.cluster__item--2x2, .cluster.cluster--height180 .cluster__item.cluster__item--3x2, .cluster.cluster--height180 .cluster__item.cluster__item--4x2 {
-  height: 380px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
 .cluster.cluster--height200 .cluster__item {
-  height: 210px;
+  height: 220px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
 .cluster.cluster--height200 .cluster__item.cluster__item--1x3 {
-  height: 630px;
+  height: 660px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
 .cluster.cluster--height200 .cluster__item.cluster__item--1x4 {
-  height: 840px;
+  height: 880px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
 .cluster.cluster--height200 .cluster__item.cluster__item--1x2, .cluster.cluster--height200 .cluster__item.cluster__item--2x2, .cluster.cluster--height200 .cluster__item.cluster__item--3x2, .cluster.cluster--height200 .cluster__item.cluster__item--4x2 {
+  height: 440px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
+.cluster.cluster--height250 .cluster__item {
+  height: 270px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
+.cluster.cluster--height250 .cluster__item.cluster__item--1x3 {
+  height: 810px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
+.cluster.cluster--height250 .cluster__item.cluster__item--1x4 {
+  height: 1080px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
+.cluster.cluster--height250 .cluster__item.cluster__item--1x2, .cluster.cluster--height250 .cluster__item.cluster__item--2x2, .cluster.cluster--height250 .cluster__item.cluster__item--3x2, .cluster.cluster--height250 .cluster__item.cluster__item--4x2 {
+  height: 540px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
+.cluster.cluster--height300 .cluster__item {
+  height: 320px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
+.cluster.cluster--height300 .cluster__item.cluster__item--1x3 {
+  height: 960px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
+.cluster.cluster--height300 .cluster__item.cluster__item--1x4 {
+  height: 1280px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
+.cluster.cluster--height300 .cluster__item.cluster__item--1x2, .cluster.cluster--height300 .cluster__item.cluster__item--2x2, .cluster.cluster--height300 .cluster__item.cluster__item--3x2, .cluster.cluster--height300 .cluster__item.cluster__item--4x2 {
+  height: 640px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
+.cluster.cluster--height350 .cluster__item {
+  height: 370px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
+.cluster.cluster--height350 .cluster__item.cluster__item--1x3 {
+  height: 1110px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
+.cluster.cluster--height350 .cluster__item.cluster__item--1x4 {
+  height: 1480px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
+.cluster.cluster--height350 .cluster__item.cluster__item--1x2, .cluster.cluster--height350 .cluster__item.cluster__item--2x2, .cluster.cluster--height350 .cluster__item.cluster__item--3x2, .cluster.cluster--height350 .cluster__item.cluster__item--4x2 {
+  height: 740px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003181}}
+.cluster.cluster--height400 .cluster__item {
   height: 420px;
 }
-@media all and (min-width: 620px) and (max-width: 1020px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003183}}
+.cluster.cluster--height400 .cluster__item.cluster__item--1x3 {
+  height: 1260px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003186}}
+.cluster.cluster--height400 .cluster__item.cluster__item--1x4 {
+  height: 1680px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003189}}
+.cluster.cluster--height400 .cluster__item.cluster__item--1x2, .cluster.cluster--height400 .cluster__item.cluster__item--2x2, .cluster.cluster--height400 .cluster__item.cluster__item--3x2, .cluster.cluster--height400 .cluster__item.cluster__item--4x2 {
+  height: 840px;
+}
+@media all and (min-width: 620px) and (max-width: 1288px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\00003201}}
   .cluster .cluster__item {
     width: 100%;
@@ -1257,6 +1248,88 @@ This is a "icon" module.
   .cluster.cluster--mobilebreakall .cluster__item {
     width: 100%;
   }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\000036}}
+.card {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000313}}
+.card,
+.card__image,
+.card__body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000323}}
+.card__image {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000325}}
+.card__image > img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000330}}
+.card__image > a {
+  display: block;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000333}}
+.card__image > a > img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  border: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000343}}
+.card__body {
+  width: 100%;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\000038}}
+.btn {
+  width: auto;
+  border: none;
+  border: 1px solid #181818;
+  color: #000;
+  background-color: #fff;
+  padding: 26px 23px;
+  outline: none;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 700;
+  text-rendering: optimizelegibility;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000323}}
+.btn + .btn {
+  margin-left: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000326}}
+.btn:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000333}}
+.btn {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 /* ==========================================================================

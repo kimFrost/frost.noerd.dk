@@ -14,7 +14,15 @@ $color_black: #000;
 $color_textblack: #000;
 $color_textwhite: #fff;
 
-$color_coal: #222222;
+$color_coal: #313131;
+
+
+
+
+
+
+
+
 $color_smoke: #404040;
 $color_sun: #ffd503;
 $color_grey: #cccccc;
@@ -27,8 +35,8 @@ $color_error: #b73f2b;
 
 // Media Queries, Labels and Content widths
 $contentWidth: "" !global;
-$mediaQueries: mobile 1px 619px, tablet 620px 1020px, desktop 1021px;
-$mediaQueriesContentWidths: mobile 100%, tablet 560px, desktop 960px;
+$mediaQueries: mobile 1px 619px, tablet 620px 1288px, desktop 1289px;
+$mediaQueriesContentWidths: mobile 100%, tablet 560px, desktop 1248px;
 $mediaQueriesDefault: mobile;
 
 @mixin resetContentWidth() {
