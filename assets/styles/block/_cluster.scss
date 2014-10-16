@@ -199,11 +199,13 @@ $cluster_use_mediaqueries: true;
 	@if $cluster_use_mediaqueries == true {
 		@include mediaQueries(tablet){
 			.cluster__item {
-				width: 100%;
+				width: 50%;
 				&.cluster__item--1x1,
-				&.cluster__item--2x1,
-				&.cluster__item--1x2,
-				&.cluster__item--2x2 {
+				&.cluster__item--1x2 {
+
+				}
+				&.cluster__item--2x2,
+				&.cluster__item--2x1 {
 					width: 100%;
 				}
 			}

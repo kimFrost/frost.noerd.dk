@@ -8,11 +8,14 @@
 	width: 100%;
 	display: block;
 	overflow: hidden;
+	text-align: center;
 }
 
 .card,
 .card__image,
-.card__body {
+.card__body,
+.card__bubblehandler,
+.card__bubblelink {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -38,11 +41,26 @@
 			border: 0;
 		}
 	}
+	& + .card__body {
+		padding-top: 30px;
+	}
+}
+
+.card__bubblehandler {
+	max-width: 170px;
+	margin: 20px auto 0 auto;
+}
+
+.card__bubblelink {
+
 }
 
 .card__body {
 	width: 100%;
 	clear: both;
+	color: $color_grey;
+	font-weight: normal;
+	padding: 10px 10px 30px 10px;
 }
 
 //--- MODIFIERS -------------------------------------------------------//
@@ -53,5 +71,9 @@
 	&:hover {
 		background-color: $color_almostwhite;
 		border: 1px solid $color_lightergrey;
+		.card__bubblelink {
+			@include transform(rotate(-30deg) scale(0.8, 0.8));
+			background-color: lighten($color_heart, 10%);
+		}
 	}
 }

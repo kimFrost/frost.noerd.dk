@@ -4,18 +4,30 @@
 
 // BLOCK
 .bubble {
-	@include transition(all 300ms ease);
-	@include transform-origin(50%, 50%);
-	@include border-radius(50%, 50%, 50%, 50%);
-	background-color: $color_heart;
-	//padding: 20px;
 	width: 100%;
 	display: block;
 	position: relative;
 	padding-bottom: 100%;
 	&:hover {
-		@include rotate3d(1, 1, 0, -180deg);
-		background-color: darken($color_heart, 10%);
+		&:after,
+		.bubble__icon {
+			//@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
+			@include transform(rotate(-30deg) scale(0.8, 0.8));
+			background-color: lighten($color_heart, 10%);
+			//animation-name: bubbleSpinIn;
+			//animation-fill-mode: forward;
+			//animation-fill-mode: backwards;
+			//animation-play-state: running;
+		}
+	}
+	&:after {
+		//animation-name: bubbleSpinOut;
+		//animation-duration: 400ms;
+		//animation-timing-function: ease;
+		//animation-iteration-count: 1;
+		//animation-fill-mode: backwards;
+		//animation-play-state: paused;
+		//animation-fill-mode: backwards;
 	}
 }
 
@@ -27,6 +39,48 @@
 
 //--- ELEMENTS ----------------------------------------------------------//
 
+.bubble__icon {
+	@include transition(all 300ms ease);
+	@include transform-origin(50%, 50%);
+	@include border-radius(50%, 50%, 50%, 50%);
+	@include scale(1, 1);
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $color_heart;
+	text-align: center;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../images/graphic/bubble_icon_seo.png');
+
+	& > img {
+
+	}
+}
 
 //--- MODIFIERS -------------------------------------------------------//
 
+@include keyframes(bubbleSpinOut) {
+	0% {
+
+	}
+	100% {
+		@include scale(1, 1);
+		background-color: $color_heart;
+
+	}
+}
+
+@include keyframes(bubbleSpinIn) {
+	0% {
+
+	}
+	100% {
+		@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
+		background-color: lighten($color_heart, 10%);
+	}
+}

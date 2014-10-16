@@ -2,6 +2,7 @@
 .rte {
 	display: block;
 	width: 100%;
+	color: $color_grey;
 }
 
 .rte {
@@ -10,20 +11,35 @@
 	-webkit-box-sizing: border-box;
 }
 
+// Layout Setup 1
+
 .rte p,
 .rte h1,
 .rte h2,
 .rte h3,
 .rte h4 {
 	margin-top: 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
-
 
 .rte p {
 	@include fontSize(delta, 1.2);
 }
 
+.rte h1 {
+	@include fontSize(zeta, 1.2);
+	color: $color_black;
+	font-weight: 700;
+	text-transform: uppercase;
+}
 
 .rte h2 {
-	@include fontSize(epsilon, 1.2);
+	@include fontSize(delta, 1.2);
+	color: $color_black;
+	font-weight: 700;
+	text-transform: uppercase;
 }
+
+// Layout Setup 2
