@@ -78,6 +78,8 @@
 
 .inlinelist--iconlist {
 	.inlinelist__item {
+		line-height: 60px;
+		font-size: 40px;
 		width: 60px;
 		& + .inlinelist__item {
 			margin-left: 10px;
