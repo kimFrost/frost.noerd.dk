@@ -41,7 +41,7 @@ $__useFixedHeader: false;
 	-webkit-box-sizing: border-box;
 }
 
-// ELEMENTS
+//--- ELEMENTS ----------------------------------------------------------//
 
 .container__inner {
     position: relative;
@@ -120,7 +120,17 @@ $__useFixedHeader: false;
 	}
 }
 
-// MODIFIERS
+.container__headline {
+	@include fontSize(theta, 1);
+	width: 100%;
+	display: block;
+	clear: both;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+//--- MODIFIERS -------------------------------------------------------//
 
 .container--fitscreen {
 	height: 100%;
@@ -199,4 +209,8 @@ $__useFixedHeader: false;
 
 .container__content--full {
 	width: 100%;
+}
+
+.container__headline--closer {
+	margin-bottom: 30px;
 }

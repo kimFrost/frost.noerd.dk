@@ -178,32 +178,49 @@ html {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003123}}
+.container__headline {
+  width: 100%;
+  display: block;
+  clear: both;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000354}}
+.container__headline {
+  font-size: 30px;
+  font-size: 1.6666666667rem;
+  line-height: 30px;
+  line-height: 1.6666666667rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003135}}
 .container--fitscreen {
   height: 100%;
   min-height: 400px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003142}}
 .container--partial {
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003147}}
 .container--list {
   height: 100%;
   padding-left: 0;
   padding-right: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003153}}
 .container--superpadding {
   padding-top: 200px;
   padding-bottom: 200px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003158}}
 .container--header {
   top: 0;
   left: 0;
@@ -221,7 +238,7 @@ html {
   align-items: center;
   position: absolute;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003176}}
 .container--header .container__inner {
   display: -webkit-box;
   display: -moz-box;
@@ -234,22 +251,27 @@ html {
   -webkit-align-items: center;
   align-items: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003198}}
 .container--header + .container--list {
   padding-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003200}}
 .container--header + .container--list > .container:first-child {
   padding-top: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003202}}
 .container--header + .container--list > .container:first-child > .container__bg {
   top: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003210}}
 .container__content--full {
   width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003214}}
+.container__headline--closer {
+  margin-bottom: 30px;
 }
 
 /*CACTUSPILOT:OPEN*/
@@ -2114,13 +2136,9 @@ a img {
   border: none;
 }
 
-/*
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/vendor\/_vendor_pollutions\.scss}line{font-family:\0000313}}
 h1, h2, h3, h4, p {
-	margin-top: 0;
-	&:last-child {
-		margin-bottom: 0;
-	}
+  margin-top: 0;
 }
-*/
 
 /*# sourceMappingURL=main.css.map */
