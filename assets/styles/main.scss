@@ -36,6 +36,7 @@ $spr-layout:smart;
 @import "block/_icon";
 @import "block/_spacer";
 @import "block/_fontsize";
+@import "block/_lineheight";
 @import "block/_minwidth";
 @import "block/_grid";
 @import "block/_cluster";
@@ -43,6 +44,9 @@ $spr-layout:smart;
 @import "block/_btn";
 @import "block/_inlinelist";
 @import "block/_theme";
+@import "block/_splash";
+@import "block/_attachment";
+@import "block/_bubble";
 
 
 // Vendor

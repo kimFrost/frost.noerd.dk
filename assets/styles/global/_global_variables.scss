@@ -3,7 +3,7 @@
 
 // Options booleans
 $useAdaptive: true !global; // Media Querie mixin will skip if this ain't true
-$debug: true !global; // Show debug features
+$debug: false !global; // Show debug features
 $showClasses: false !global; // Show debug features
 $allowCrossAlter: false !global; // Allow modules to alter each other // DEPRECATED --> Replaced by new blockconstructor extendmode function
 

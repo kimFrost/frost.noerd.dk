@@ -47,3 +47,11 @@
 
 //--- MODIFIERS -------------------------------------------------------//
 
+.card--link {
+	cursor: pointer;
+	border: 1px solid transparent;
+	&:hover {
+		background-color: $color_almostwhite;
+		border: 1px solid $color_lightergrey;
+	}
+}

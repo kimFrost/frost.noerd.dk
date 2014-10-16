@@ -20,7 +20,11 @@
 
 //--- ELEMENTS -----------------------------------------------------//
 
-
+.noerd__menu {
+	@include fontSize(gamma);
+	text-transform: uppercase;
+	font-weight: 700;
+}
 
 
 //--- Modifiers -----------------------------------------------------//

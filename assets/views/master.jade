@@ -20,13 +20,19 @@ html(data-ng-app="noerdDk", lang="da")
 			header.container.container--header
 				div.container__content
 					div.container__inner
-						div.grid.grid--12 Logo
 						div.grid.grid--12
-							div.inlinelist
-								div.inlinelist__item 1
-								div.inlinelist__item 2
-								div.inlinelist__item 3
-								div.inlinelist__item 4
+							a(href="/", title="Nörd forside")
+								img(src="/images/content/logo.png", alt="nörd")
+						div.grid.grid--12
+							nav.inlinelist.noerd__menu
+								div.inlinelist__item Arbejdet
+								div.inlinelist__item Om os
+								div.inlinelist__item Services
+								div.inlinelist__item Nörderier
+								div.inlinelist__item Kontakt
+								div.inlinelist__item Menu
+									span.icon--alignJustify
+
 
 			div.container.container--list
 				block content

@@ -1,0 +1,32 @@
+
+
+// PARAMETERS
+
+// BLOCK
+.bubble {
+	@include transition(all 300ms ease);
+	@include transform-origin(50%, 50%);
+	@include border-radius(50%, 50%, 50%, 50%);
+	background-color: $color_heart;
+	//padding: 20px;
+	width: 100%;
+	display: block;
+	position: relative;
+	padding-bottom: 100%;
+	&:hover {
+		@include rotate3d(1, 1, 0, -180deg);
+		background-color: darken($color_heart, 10%);
+	}
+}
+
+.bubble {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+//--- ELEMENTS ----------------------------------------------------------//
+
+
+//--- MODIFIERS -------------------------------------------------------//
+

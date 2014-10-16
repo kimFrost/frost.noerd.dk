@@ -1,0 +1,15 @@
+
+
+.lineheight {
+
+}
+
+// Generates a modifier for each fontsize defined in global_fonts
+@for $i from 1 through length($fontsizes) {
+	$size: nth($fontsizes, $i);
+	$sizeValue: nth($size, 2);
+	$sizeLabel: nth($size, 1);
+	.lineheight--#{$sizeLabel} {
+		line-height: #{$sizeValue}px;
+	}
+}

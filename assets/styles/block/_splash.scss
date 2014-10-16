@@ -1,0 +1,78 @@
+
+
+// PARAMETERS
+
+// BLOCK
+.splash {
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.splash,
+.splash__box {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+//--- ELEMENTS ----------------------------------------------------------//
+
+.splash__box {
+	width: 100%;
+	padding: 40px 20px;
+	border: 10px solid $color_black;
+	@include mediaQueries(tablet) {
+		width: 80%;
+		padding: 120px 40px;
+	}
+	@include mediaQueries(desktop) {
+		width: 50%;
+		padding: 120px 40px;
+	}
+}
+
+.splash__bigline {
+	@include fontSize(iota, 1.1);
+	@include mediaQueries(tablet) {
+		@include fontSize(iota, 1.2);
+	}
+	@include mediaQueries(desktop) {
+		@include fontSize(iota, 1.3);
+	}
+}
+
+.splash__smallline {
+	@include fontSize(gamma, 1.3);
+	@include mediaQueries(tablet) {
+		@include fontSize(gamma, 1.3);
+	}
+	@include mediaQueries(desktop) {
+		@include fontSize(gamma, 1.3);
+	}
+}
+
+//--- MODIFIERS -------------------------------------------------------//
+
