@@ -60,23 +60,20 @@ html {
   border-bottom: 1px solid #ebebeb;
   background-color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000323}}
 .container:after {
   content: "";
   display: block;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000329}}
-.container:nth-child(even) {
-  background-color: #f9f9f9;
-}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\0000333}}
 .container,
 .container__inner,
 .container__content,
 .container__bg,
-.container__header {
+.container__header,
+.container__headline {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -264,12 +261,23 @@ html {
   top: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003211}}
+.container--black {
+  background-color: #000;
+  color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003216}}
+.container--almostwhite {
+  background-color: #f9f9f9;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003220}}
 .container__content--full {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_container\.scss}line{font-family:\00003224}}
 .container__headline--closer {
   margin-bottom: 30px;
 }
@@ -1420,19 +1428,20 @@ This is a "icon" module.
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000326}}
 .card__image {
   width: 100%;
+  margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000329}}
 .card__image > img {
   display: block;
   width: 100%;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000334}}
 .card__image > a {
   display: block;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000337}}
 .card__image > a > img {
   display: block;
   width: 100%;
@@ -1440,18 +1449,18 @@ This is a "icon" module.
   outline: 0;
   border: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000345}}
 .card__image + .card__body {
   padding-top: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000350}}
 .card__bubblehandler {
   max-width: 170px;
   margin: 20px auto 0 auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000359}}
 .card__body {
   width: 100%;
   clear: both;
@@ -1460,17 +1469,17 @@ This is a "icon" module.
   padding: 10px 10px 30px 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000369}}
 .card--link {
   cursor: pointer;
   border: 1px solid transparent;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000372}}
 .card--link:hover {
   background-color: #f9f9f9;
   border: 1px solid #ebebeb;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\0000375}}
 .card--link:hover .card__bubblelink {
   -moz-transform: rotate(-30deg) scale(0.8, 0.8);
   -ms-transform: rotate(-30deg) scale(0.8, 0.8);
@@ -1486,7 +1495,7 @@ This is a "icon" module.
   border: 1px solid #181818;
   color: #000;
   background-color: #fff;
-  padding: 26px 23px;
+  padding: 22px 16px;
   outline: none;
   text-transform: uppercase;
   display: block;
@@ -1494,24 +1503,36 @@ This is a "icon" module.
   margin: 0;
   cursor: pointer;
   font-weight: 700;
+  min-width: 170px;
+  text-align: center;
   text-rendering: optimizelegibility;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000354}}
+.btn {
+  font-size: 14px;
+  font-size: 0.7777777778rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000326}}
 .btn + .btn {
   margin-left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000329}}
 .btn:after {
   content: "";
   display: block;
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000336}}
 .btn {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000349}}
+.btn--center {
+  margin: 0 auto;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\000033}}
@@ -1590,6 +1611,15 @@ This is a "icon" module.
     margin-left: 0;
     margin-top: 10px;
   }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000380}}
+.inlinelist--iconlist .inlinelist__item {
+  width: 60px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000382}}
+.inlinelist--iconlist .inlinelist__item + .inlinelist__item {
+  margin-left: 10px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_theme\.scss}line{font-family:\0000319}}
@@ -1729,8 +1759,9 @@ This is a "icon" module.
   display: block;
   position: relative;
   padding-bottom: 100%;
+  color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000313}}
 .bubble:hover:after,
 .bubble:hover .bubble__icon {
   -moz-transform: rotate(-30deg) scale(0.8, 0.8);
@@ -1740,14 +1771,14 @@ This is a "icon" module.
   background-color: #f37a80;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000335}}
 .bubble {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000343}}
 .bubble__icon {
   -moz-transition: all 300ms ease;
   -o-transition: all 300ms ease;
@@ -1785,6 +1816,24 @@ This is a "icon" module.
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("../images/graphic/bubble_icon_seo.png");
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000368}}
+.bubble--link {
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000372}}
+.bubble--grey {
+  color: #000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000374}}
+.bubble--grey .bubble__icon {
+  background-color: #777777;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000378}}
+.bubble--grey:hover .bubble__icon {
+  background-color: #919191;
 }
 
 @-moz-keyframes bubbleSpinOut {

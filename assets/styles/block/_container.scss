@@ -16,7 +16,6 @@ $__useFixedHeader: false;
 	position: relative;
 	border-bottom: 1px solid $color_lightergrey;
 	background-color: $color_white;
-
     @include onlyInDebug() {
 		background-color: bisque;
 		border-bottom: 1px solid darken(goldenrod, 10%);
@@ -27,7 +26,7 @@ $__useFixedHeader: false;
 		clear: both;
 	}
 	&:nth-child(even) {
-		background-color: $color_almostwhite;
+		//background-color: $color_almostwhite;
 	}
 }
 
@@ -35,7 +34,8 @@ $__useFixedHeader: false;
 .container__inner,
 .container__content,
 .container__bg,
-.container__header {
+.container__header,
+.container__headline {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -207,6 +207,16 @@ $__useFixedHeader: false;
 	}
 }
 
+
+.container--black {
+	background-color: $color_black;
+	color: $color_white;
+}
+
+.container--almostwhite {
+	background-color: $color_almostwhite;
+}
+
 .container__content--full {
 	width: 100%;
 }
@@ -214,3 +224,4 @@ $__useFixedHeader: false;
 .container__headline--closer {
 	margin-bottom: 30px;
 }
+

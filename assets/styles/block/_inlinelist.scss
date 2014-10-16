@@ -76,3 +76,11 @@
 	}
 }
 
+.inlinelist--iconlist {
+	.inlinelist__item {
+		width: 60px;
+		& + .inlinelist__item {
+			margin-left: 10px;
+		}
+	}
+}
