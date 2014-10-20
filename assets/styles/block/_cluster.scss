@@ -147,13 +147,16 @@ $cluster_use_mediaqueries: true;
 
 // Generate width and height sizes for items per line
 .cluster {
-	@if $cluster_use_advanced == true {
+	@if $cluster_use_advanced {
 		// Widths
 		@if $cluster_max_items_per_line > $cluster_min_items_per_line {
 			@for $i from $cluster_min_items_per_line through $cluster_max_items_per_line {
 				&.cluster--line#{$i} {
 					.cluster__item {
 						width: 100% / $i;
+						&:nth-child(#{$i}n+1) {
+							clear: left;
+						}
 						// Modifiers
 						&.cluster__item--2x1,
 						&.cluster__item--2x2 {
@@ -196,7 +199,7 @@ $cluster_use_mediaqueries: true;
 			}
 		}
 	}
-	@if $cluster_use_mediaqueries == true {
+	@if $cluster_use_mediaqueries {
 		@include mediaQueries(tablet){
 			.cluster__item {
 				width: 50%;
@@ -207,6 +210,15 @@ $cluster_use_mediaqueries: true;
 				&.cluster__item--2x2,
 				&.cluster__item--2x1 {
 					width: 100%;
+				}
+
+			}
+			&.cluster--line4 {
+				.cluster__item {
+					width: 50%;
+					&:nth-child(2n+1) {
+						clear: left;
+					}
 				}
 			}
 		}
@@ -220,8 +232,15 @@ $cluster_use_mediaqueries: true;
 					width: 100%;
 				}
 			}
+			&.cluster--line4 {
+				.cluster__item {
+					width: 50%;
+					&:nth-child(2n+1) {
+						clear: left;
+					}
+				}
+			}
 		}
-
 	}
 	&.cluster--autoHeight {
 		.cluster__item {
@@ -235,6 +254,21 @@ $cluster_use_mediaqueries: true;
 			}
 		}
 	}
+	&.cluster--allowoverflow {
+		overflow: visible;
+	}
 }
 
 
+
+// Pre Set querie values
+.cluster--mobileline2 {
+	@include mediaQueries(mobile) {
+		.cluster__item {
+			width: (100%/2);
+			&:nth-child(2n+1) {
+				clear: left;
+			}
+		}
+	}
+}
