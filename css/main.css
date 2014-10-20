@@ -1065,6 +1065,38 @@ This is a "icon" module.
     width: 100%;
   }
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000325}}
+.query--tablet {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000325}}
+.query--desktop {
+  display: none;
+}
+
+@media all and (min-width: 620px) and (max-width: 1288px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
+  .query--mobile {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
+  .query--desktop {
+    display: none;
+  }
+}
+@media all and (min-width: 1289px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
+  .query--mobile {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
+  .query--tablet {
+    display: none;
+  }
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\0000323}}
 .cluster {
   width: 100%;
