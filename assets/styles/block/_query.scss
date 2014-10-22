@@ -1,4 +1,11 @@
 
+// DESCRIPTION
+/*
+	These classes are for showing markup under their specific media query.
+	Ex. under media query mobile profile, with .query--mobile, the element will be shown only on the mobile profile
+	Ex. the classes can be combined, so .query--mobile.query--tablet will be shown both on mobile and tablet profiles.
+*/
+
 // PARAMETERS
 
 
@@ -14,16 +21,23 @@
 
 //--- MODIFERS -----------------------------------------------------//
 
+
+// Generates the appropriate classes from $mediaQueriesContentWidths
 @for $i from 1 through length($mediaQueriesContentWidths) {
 	$__list: nth($mediaQueriesContentWidths, $i);
 	$__name: nth($__list, 1);
-	@if $__name == $mediaQueriesDefault {
+
+
+	@if $__name == $mediaQueriesDefault and false {
+		// This is not being used.
 		@for $ii from 1 through length($mediaQueriesContentWidths) {
 			$__list_sub: nth($mediaQueriesContentWidths, $ii);
 			$__name_sub: nth($__list_sub, 1);
 			@if $__name_sub != $mediaQueriesDefault {
 				.query--#{$__name_sub} {
-					display: none;
+					&:not(.query--#{$__name}) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -35,7 +49,9 @@
 				$__name_sub: nth($__list_sub, 1);
 				@if $__name != $__name_sub {
 					.query--#{$__name_sub} {
-						display: none;
+						&:not(.query--#{$__name}) {
+							display: none;
+						}
 					}
 				}
 			}

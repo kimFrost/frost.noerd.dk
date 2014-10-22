@@ -1065,38 +1065,6 @@ This is a "icon" module.
     width: 100%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000325}}
-.query--tablet {
-  display: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000325}}
-.query--desktop {
-  display: none;
-}
-
-@media all and (min-width: 620px) and (max-width: 1288px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
-  .query--mobile {
-    display: none;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
-  .query--desktop {
-    display: none;
-  }
-}
-@media all and (min-width: 1289px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
-  .query--mobile {
-    display: none;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000337}}
-  .query--tablet {
-    display: none;
-  }
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_cluster\.scss}line{font-family:\0000323}}
 .cluster {
   width: 100%;
@@ -2147,6 +2115,66 @@ This is a "icon" module.
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_fact\.scss}line{font-family:\00003136}}
   .fact__icon--www {
     background-image: url("../images/graphic/icon_www_black.png");
+  }
+}
+/*
+	These classes are for showing markup under their specific media query.
+	Ex. under media query mobile profile, with .query--mobile, the element will be shown only on the mobile profile
+	Ex. the classes can be combined, so .query--mobile.query--tablet will be shown both on mobile and tablet profiles.
+*/
+@media all and (min-width: 1px) and (max-width: 619px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--tablet:not(.query--mobile) {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--desktop:not(.query--mobile) {
+    display: none;
+  }
+}
+@media all and (min-width: 620px) and (max-width: 1288px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--mobile:not(.query--tablet) {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--desktop:not(.query--tablet) {
+    display: none;
+  }
+}
+@media all and (min-width: 1289px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--mobile:not(.query--desktop) {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_query\.scss}line{font-family:\0000352}}
+  .query--tablet:not(.query--desktop) {
+    display: none;
+  }
+}
+/*
+	These classes are for hiding markup under their specific media query.
+	Ex. under media query mobile profile, with .querynot--mobile, the element will be hidden only on the mobile profile
+*/
+@media all and (min-width: 1px) and (max-width: 619px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_querynot\.scss}line{font-family:\0000331}}
+  .querynot--mobile {
+    display: none;
+  }
+}
+@media all and (min-width: 620px) and (max-width: 1288px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_querynot\.scss}line{font-family:\0000331}}
+  .querynot--tablet {
+    display: none;
+  }
+}
+@media all and (min-width: 1289px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_querynot\.scss}line{font-family:\0000331}}
+  .querynot--desktop {
+    display: none;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_rte\.scss}line{font-family:\000032}}

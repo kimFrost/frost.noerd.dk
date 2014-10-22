@@ -30,6 +30,7 @@ $spr-layout:smart;
 @import "global/_global_mixins";
 @import "global/_global_blockconstructor";
 
+
 // Block
 @import "block/_noerd";
 @import "block/_container";
@@ -39,7 +40,6 @@ $spr-layout:smart;
 @import "block/_lineheight";
 @import "block/_minwidth";
 @import "block/_grid";
-@import "block/_query";
 @import "block/_cluster";
 @import "block/_card";
 @import "block/_btn";
@@ -49,6 +49,8 @@ $spr-layout:smart;
 @import "block/_attachment";
 @import "block/_bubble";
 @import "block/_fact";
+@import "block/_query";
+@import "block/_querynot";
 @import "block/_rte";
 
 
