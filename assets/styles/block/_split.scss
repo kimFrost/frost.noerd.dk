@@ -1,0 +1,98 @@
+
+// DESCRIPTION
+
+
+// NOTES
+/*
+	The flexbox isn't required to work,
+	but will make sure that the content on both sides
+	are vertically centered, according to each others.
+*/
+
+
+// PARAMETERS
+
+// BLOCK
+.split {
+	height: 100%;
+	display: block;
+	text-align: center;
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		background-color: $color_white;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.split,
+.split__left,
+.split__right {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+//--- ELEMENTS ----------------------------------------------------------//
+
+.split__left {
+	@include fontSize(zeta, 1.2);
+	font-weight: 700;
+	width: 50%;
+	text-align: right;
+	float: left;
+	padding-right: 25px;
+}
+
+.split__right {
+	float: left;
+	width: 50%;
+	text-align: left;
+	padding-left: 25px;
+}
+
+//--- MODIFIERS -------------------------------------------------------//
+
+@include mediaQueries(mobile) {
+	.split {
+		display: block;
+		&:before {
+			display: none;
+		}
+	}
+	.split__left,
+	.split__right {
+		width: 100%;
+		text-align: center;
+	}
+	.split__left {
+		& + .split__right {
+			margin-top: 25px;
+		}
+	}
+}

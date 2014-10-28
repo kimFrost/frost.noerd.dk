@@ -173,4 +173,19 @@ This is a "#{$__blockName}" module.
 		content: "\f00c";
 	}
 }
+.icon--facebook {
+	&:before {
+		content: "\f09a";
+	}
+}
+.icon--twitter {
+	&:before {
+		content: "\f099";
+	}
+}
+.icon--googleplus {
+	&:before {
+		content: "\f0d5";
+	}
+}
 

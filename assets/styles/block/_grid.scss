@@ -5,7 +5,8 @@
 $__gridSize: 24;
 $__gridSpacing: 10px;
 
-.grid {
+.grid,
+[class*=grid--] {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -15,7 +16,9 @@ $__gridSpacing: 10px;
 	width: 100%;
 }
 
-.grid {
+.grid,
+[class*=grid--],
+.grid__wedge {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -23,6 +26,12 @@ $__gridSpacing: 10px;
 
 // Elements
 
+.grid__wedge {
+	display: block;
+	height: $__gridSpacing;
+	width: 100%;
+	clear: both;
+}
 
 // Modifiers
 
@@ -66,6 +75,10 @@ $__gridSpacing: 10px;
 	text-align: center;
 }
 
+.grid--noresponsive {
+
+}
+
 @for $i from 1 through $__gridSize {
 	.grid--#{$i} {
 		width: 100% / $__gridSize * $i;
@@ -77,12 +90,14 @@ $__gridSpacing: 10px;
 	$__gridSizeNew: 12;
 	@for $i from 1 through $__gridSize {
 		.grid--#{$i} {
-			$__scale: $__gridSize / $__gridSizeNew;
-			$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
-			@if $__newWidth > 100% {
-				$__newWidth: 100%;
+			&:not(.grid--noresponsive) {
+				$__scale: $__gridSize / $__gridSizeNew;
+				$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
+				@if $__newWidth > 100% {
+					$__newWidth: 100%;
+				}
+				width: $__newWidth;
 			}
-			width: $__newWidth;
 		}
 	}
 };
@@ -90,12 +105,14 @@ $__gridSpacing: 10px;
 	$__gridSizeNew: 6;
 	@for $i from 1 through $__gridSize {
 		.grid--#{$i} {
-			$__scale: $__gridSize / $__gridSizeNew;
-			$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
-			@if $__newWidth > 100% {
-				$__newWidth: 100%;
+			&:not(.grid--noresponsive) {
+				$__scale: $__gridSize / $__gridSizeNew;
+				$__newWidth: (100% / ($__gridSize) * $i) * $__scale;
+				@if $__newWidth > 100% {
+					$__newWidth: 100%;
+				}
+				width: $__newWidth;
 			}
-			width: $__newWidth;
 		}
 	}
 };

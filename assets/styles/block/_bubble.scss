@@ -9,18 +9,6 @@
 	position: relative;
 	padding-bottom: 100%;
 	color: $color_white;
-	&:hover {
-		&:after,
-		.bubble__icon {
-			//@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
-			@include transform(rotate(-30deg) scale(0.8, 0.8));
-			background-color: lighten($color_heart, 10%);
-			//animation-name: bubbleSpinIn;
-			//animation-fill-mode: forward;
-			//animation-fill-mode: backwards;
-			//animation-play-state: running;
-		}
-	}
 	&:after {
 		//animation-name: bubbleSpinOut;
 		//animation-duration: 400ms;
@@ -56,7 +44,6 @@
 
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url('../images/graphic/bubble_icon_seo.png');
 
 	& > img {
 
@@ -67,6 +54,18 @@
 
 .bubble--link {
 	cursor: pointer;
+	&:hover {
+		&:after,
+		.bubble__icon {
+			//@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
+			@include transform(rotate(-30deg) scale(0.8, 0.8));
+			background-color: lighten($color_heart, 10%);
+			//animation-name: bubbleSpinIn;
+			//animation-fill-mode: forward;
+			//animation-fill-mode: backwards;
+			//animation-play-state: running;
+		}
+	}
 }
 
 .bubble--grey {
@@ -74,13 +73,19 @@
 	.bubble__icon {
 		background-color: $color_grey;
 	}
-	&:hover {
-		.bubble__icon {
-			background-color: lighten($color_grey, 10%);
+	&.bubble--link {
+		&:hover {
+			.bubble__icon {
+				color: $color_white;
+				background-color: lighten($color_grey, 10%);
+			}
 		}
 	}
 }
 
+.bubble__icon--seo {
+	background-image: url('../images/graphic/bubble_icon_seo.png');
+}
 
 
 @include keyframes(bubbleSpinOut) {

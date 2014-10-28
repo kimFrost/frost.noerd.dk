@@ -419,6 +419,21 @@ This is a "icon" module.
   content: "\f00c";
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003177}}
+.icon--facebook:before {
+  content: "\f09a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003182}}
+.icon--twitter:before {
+  content: "\f099";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_icon\.scss}line{font-family:\00003187}}
+.icon--googleplus:before {
+  content: "\f0d5";
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_spacer\.scss}line{font-family:\000034}}
 .spacer {
   display: block;
@@ -628,7 +643,8 @@ This is a "icon" module.
 /* Grid
 ---------------------------------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\000038}}
-.grid {
+.grid,
+[class*=grid--] {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -638,430 +654,440 @@ This is a "icon" module.
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000318}}
-.grid {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000319}}
+.grid,
+[class*=grid--],
+.grid__wedge {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000329}}
+.grid__wedge {
+  display: block;
+  height: 10px;
+  width: 100%;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000338}}
 .grid--spaceright {
   padding-right: 10px;
 }
 @media all and (min-width: 620px) and (max-width: 1288px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000338}}
   .grid--spaceright {
     padding-right: 0;
     padding-bottom: 10px;
   }
 }
 @media all and (min-width: 1px) and (max-width: 619px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000338}}
   .grid--spaceright {
     padding-right: 0;
     padding-bottom: 10px;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000350}}
 .grid--spaceleft {
   padding-left: 10px;
 }
 @media all and (min-width: 620px) and (max-width: 1288px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000350}}
   .grid--spaceleft {
     padding-left: 0;
     padding-top: 10px;
   }
 }
 @media all and (min-width: 1px) and (max-width: 619px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000350}}
   .grid--spaceleft {
     padding-left: 0;
     padding-top: 10px;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000362}}
 .grid--spacebottom {
   margin-bottom: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000366}}
 .grid--spacetop {
   margin-top: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
 .grid--alignright {
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000374}}
 .grid--aligncenter {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--1 {
   width: 4.1666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--2 {
   width: 8.3333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--3 {
   width: 12.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--4 {
   width: 16.6666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--5 {
   width: 20.8333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--6 {
   width: 25%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--7 {
   width: 29.1666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--8 {
   width: 33.3333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--9 {
   width: 37.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--10 {
   width: 41.6666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--11 {
   width: 45.8333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--12 {
   width: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--13 {
   width: 54.1666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--14 {
   width: 58.3333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--15 {
   width: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--16 {
   width: 66.6666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--17 {
   width: 70.8333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--18 {
   width: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--19 {
   width: 79.1666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--20 {
   width: 83.3333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--21 {
   width: 87.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--22 {
   width: 91.6666666667%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--23 {
   width: 95.8333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000383}}
 .grid--24 {
   width: 100%;
 }
 
 @media all and (min-width: 620px) and (max-width: 1288px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--1:not(.grid--noresponsive) {
     width: 8.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--2 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--2:not(.grid--noresponsive) {
     width: 16.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--3:not(.grid--noresponsive) {
     width: 25%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--4:not(.grid--noresponsive) {
     width: 33.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--5 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--5:not(.grid--noresponsive) {
     width: 41.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--6:not(.grid--noresponsive) {
     width: 50%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--7 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--7:not(.grid--noresponsive) {
     width: 58.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--8 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--8:not(.grid--noresponsive) {
     width: 66.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--9 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--9:not(.grid--noresponsive) {
     width: 75%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--10 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--10:not(.grid--noresponsive) {
     width: 83.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--11 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--11:not(.grid--noresponsive) {
     width: 91.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--12 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--12:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--13 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--13:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--14 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--14:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--15 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--15:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--16 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--16:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--17 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--17:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--18 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--18:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--19 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--19:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--20 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--20:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--21 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--21:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--22 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--22:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--23 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--23:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000379}}
-  .grid--24 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000393}}
+  .grid--24:not(.grid--noresponsive) {
     width: 100%;
   }
 }
 @media all and (min-width: 1px) and (max-width: 619px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--1:not(.grid--noresponsive) {
     width: 16.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--2 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--2:not(.grid--noresponsive) {
     width: 33.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--3:not(.grid--noresponsive) {
     width: 50%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--4:not(.grid--noresponsive) {
     width: 66.6666666667%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--5 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--5:not(.grid--noresponsive) {
     width: 83.3333333333%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--6 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--6:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--7 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--7:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--8 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--8:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--9 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--9:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--10 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--10:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--11 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--11:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--12 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--12:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--13 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--13:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--14 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--14:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--15 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--15:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--16 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--16:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--17 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--17:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--18 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--18:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--19 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--19:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--20 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--20:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--21 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--21:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--22 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--22:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--23 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--23:not(.grid--noresponsive) {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\0000392}}
-  .grid--24 {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_grid\.scss}line{font-family:\00003108}}
+  .grid--24:not(.grid--noresponsive) {
     width: 100%;
   }
 }
@@ -1471,6 +1497,103 @@ This is a "icon" module.
   }
 }
 
+/*
+	The flexbox isn't required to work,
+	but will make sure that the content on both sides
+	are vertically centered, according to each others.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000316}}
+.split {
+  height: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000336}}
+.split:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000346}}
+.split:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000353}}
+.split,
+.split__left,
+.split__right {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000363}}
+.split__left {
+  font-weight: 700;
+  width: 50%;
+  text-align: right;
+  float: left;
+  padding-right: 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000354}}
+.split__left {
+  font-size: 20px;
+  font-size: 1.1111111111rem;
+  line-height: 24px;
+  line-height: 1.3333333333rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000372}}
+.split__right {
+  float: left;
+  width: 50%;
+  text-align: left;
+  padding-left: 25px;
+}
+
+@media all and (min-width: 1px) and (max-width: 619px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000382}}
+  .split {
+    display: block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000384}}
+  .split:before {
+    display: none;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000388}}
+  .split__left,
+  .split__right {
+    width: 100%;
+    text-align: center;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_split\.scss}line{font-family:\0000394}}
+  .split__left + .split__right {
+    margin-top: 25px;
+  }
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_card\.scss}line{font-family:\000036}}
 .card {
   height: 100%;
@@ -1575,17 +1698,33 @@ This is a "icon" module.
   font-size: 0.7777777778rem;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000322}}
+.btn:hover {
+  color: #666666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000324}}
+.btn:hover .btn__text {
+  border-color: #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000328}}
+.btn:active {
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000330}}
+.btn:active .btn__text {
+  border-color: #4b4b4b;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000334}}
 .btn + .btn {
   margin-left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000337}}
 .btn:after {
   content: "";
   display: block;
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000344}}
 .btn,
 .btn__text {
   box-sizing: border-box;
@@ -1593,8 +1732,13 @@ This is a "icon" module.
   -webkit-box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000353}}
 .btn__text {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
   display: inline-block;
   padding: 22px 16px;
   border: 1px solid #181818;
@@ -1602,12 +1746,12 @@ This is a "icon" module.
   min-width: 170px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000366}}
 .btn--center {
   float: none;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000369}}
 .btn--center .btn__text {
   margin: 0 auto;
 }
@@ -1652,6 +1796,11 @@ This is a "icon" module.
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000341}}
+.inlinelist--alignleft {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000345}}
 .inlinelist--aligncenter {
   -webkit-box-pack: center;
   -moz-box-pack: center;
@@ -1661,13 +1810,13 @@ This is a "icon" module.
 }
 
 @media all and (min-width: 620px) and (max-width: 1288px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000353}}
   .inlinelist--tabletbreak {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000359}}
   .inlinelist--tabletbreak .inlinelist__item {
     clear: both;
     margin-left: 0px;
@@ -1676,13 +1825,13 @@ This is a "icon" module.
 }
 
 @media all and (min-width: 1px) and (max-width: 619px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000368}}
   .inlinelist--mobilebreak {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000374}}
   .inlinelist--mobilebreak .inlinelist__item {
     clear: both;
     margin-left: 0;
@@ -1690,13 +1839,13 @@ This is a "icon" module.
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000384}}
 .inlinelist--iconlist .inlinelist__item {
   line-height: 60px;
   font-size: 40px;
   width: 60px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\0000388}}
 .inlinelist--iconlist .inlinelist__item + .inlinelist__item {
   margin-left: 10px;
 }
@@ -1840,24 +1989,15 @@ This is a "icon" module.
   padding-bottom: 100%;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000313}}
-.bubble:hover:after,
-.bubble:hover .bubble__icon {
-  -moz-transform: rotate(-30deg) scale(0.8, 0.8);
-  -ms-transform: rotate(-30deg) scale(0.8, 0.8);
-  -webkit-transform: rotate(-30deg) scale(0.8, 0.8);
-  transform: rotate(-30deg) scale(0.8, 0.8);
-  background-color: #f37a80;
-}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000323}}
 .bubble {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000331}}
 .bubble__icon {
   -moz-transition: all 300ms ease;
   -o-transition: all 300ms ease;
@@ -1894,25 +2034,39 @@ This is a "icon" module.
   text-align: center;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("../images/graphic/bubble_icon_seo.png");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000355}}
 .bubble--link {
   cursor: pointer;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000358}}
+.bubble--link:hover:after,
+.bubble--link:hover .bubble__icon {
+  -moz-transform: rotate(-30deg) scale(0.8, 0.8);
+  -ms-transform: rotate(-30deg) scale(0.8, 0.8);
+  -webkit-transform: rotate(-30deg) scale(0.8, 0.8);
+  transform: rotate(-30deg) scale(0.8, 0.8);
+  background-color: #f37a80;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000371}}
 .bubble--grey {
   color: #000;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000373}}
 .bubble--grey .bubble__icon {
   background-color: #777777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000378}}
-.bubble--grey:hover .bubble__icon {
+.bubble--grey.bubble--link:hover .bubble__icon {
+  color: #fff;
   background-color: #919191;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_bubble\.scss}line{font-family:\0000386}}
+.bubble__icon--seo {
+  background-image: url("../images/graphic/bubble_icon_seo.png");
 }
 
 @-moz-keyframes bubbleSpinOut {

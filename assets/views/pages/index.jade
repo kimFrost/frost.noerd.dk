@@ -39,7 +39,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -51,7 +51,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -63,7 +63,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -75,7 +75,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -87,7 +87,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -99,7 +99,7 @@ block append content
 									div.card__image
 										div.card__bubblehandler
 											div.bubble
-												div.bubble__icon.card__bubblelink
+												div.bubble__icon.bubble__icon--seo.card__bubblelink
 									div.card__body
 										div.rte
 											h2 Headline
@@ -211,19 +211,23 @@ block append content
 	section.container.container--superpadding.theme.container--black
 		div.container__content
 			div.container__inner
-				div Christiansgade 30
-				div 8000 Aarhus C
-				div Tlf: (+45) 86 13 68 13
-				div.inlinelist.inlinelist--iconlist
-					div.inlinelist__item
-						div.bubble.bubble--grey
-							div.bubble__icon
-								span.icon--heartO
-					div.inlinelist__item
-						div.bubble.bubble--grey
-							div.bubble__icon
-								span.icon--times
-					div.inlinelist__item
-						div.bubble.bubble--grey
-							div.bubble__icon
-								span.icon--angleDown
+
+				div.split
+					div.split__left
+						div Christiansgade 30
+						div 8000 Aarhus C
+						div Tlf: (+45) 86 13 68 13
+					div.split__right
+						div.inlinelist.inlinelist--iconlist.inlinelist--alignleft
+							div.inlinelist__item
+								div.bubble.bubble--grey.bubble--link
+									div.bubble__icon
+										span.icon--facebook
+							div.inlinelist__item
+								div.bubble.bubble--grey.bubble--link
+									div.bubble__icon
+										span.icon--twitter
+							div.inlinelist__item
+								div.bubble.bubble--grey.bubble--link
+									div.bubble__icon
+										span.icon--googleplus
