@@ -1756,6 +1756,28 @@ This is a "icon" module.
   margin: 0 auto;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000374}}
+.btn--heart {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000376}}
+.btn--heart .btn__text {
+  background-color: #ef4b54;
+  border-width: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000381}}
+.btn--heart:hover .btn__text {
+  background-color: #f37a80;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000385}}
+.btn--heart:active {
+  color: #d9d9d9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_btn\.scss}line{font-family:\0000387}}
+.btn--heart:active .btn__text {
+  background-color: #eb1c28;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_inlinelist\.scss}line{font-family:\000033}}
 .inlinelist {
   list-style: none;

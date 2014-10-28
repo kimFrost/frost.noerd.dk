@@ -70,3 +70,22 @@
 		margin: 0 auto;
 	}
 }
+
+.btn--heart {
+	color: $color_white;
+	.btn__text {
+		background-color: $color_heart;
+		border-width: 0px;
+	}
+	&:hover {
+		.btn__text {
+			background-color: lighten($color_heart, 10%);
+		}
+	}
+	&:active {
+		color: darken($color_white, 15%);
+		.btn__text {
+			background-color: darken($color_heart, 10%);
+		}
+	}
+}
