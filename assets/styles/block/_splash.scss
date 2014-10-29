@@ -48,6 +48,10 @@
 		width: 80%;
 		padding: 120px 40px;
 	}
+	@include mediaQueries(narrowdesktop) {
+		width: 50%;
+		padding: 120px 40px;
+	}
 	@include mediaQueries(desktop) {
 		width: 50%;
 		padding: 120px 40px;
@@ -59,6 +63,9 @@
 	@include mediaQueries(tablet) {
 		@include fontSize(iota, 1.2);
 	}
+	@include mediaQueries(narrowdesktop) {
+		@include fontSize(iota, 1.3);
+	}
 	@include mediaQueries(desktop) {
 		@include fontSize(iota, 1.3);
 	}
@@ -67,6 +74,9 @@
 .splash__smallline {
 	@include fontSize(gamma, 1.3);
 	@include mediaQueries(tablet) {
+		@include fontSize(gamma, 1.3);
+	}
+	@include mediaQueries(narrowdesktop) {
 		@include fontSize(gamma, 1.3);
 	}
 	@include mediaQueries(desktop) {

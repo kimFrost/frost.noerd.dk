@@ -10,13 +10,7 @@
 	padding-bottom: 100%;
 	color: $color_white;
 	&:after {
-		//animation-name: bubbleSpinOut;
-		//animation-duration: 400ms;
-		//animation-timing-function: ease;
-		//animation-iteration-count: 1;
-		//animation-fill-mode: backwards;
-		//animation-play-state: paused;
-		//animation-fill-mode: backwards;
+
 	}
 }
 
@@ -41,12 +35,14 @@
 	height: 100%;
 	background-color: $color_heart;
 	text-align: center;
+	overflow: hidden;
 
 	background-repeat: no-repeat;
 	background-position: center center;
 
 	& > img {
-
+		display: block;
+		width: 100%;
 	}
 }
 
@@ -57,13 +53,26 @@
 	&:hover {
 		&:after,
 		.bubble__icon {
-			//@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
 			@include transform(rotate(-30deg) scale(0.8, 0.8));
 			background-color: lighten($color_heart, 10%);
-			//animation-name: bubbleSpinIn;
-			//animation-fill-mode: forward;
-			//animation-fill-mode: backwards;
-			//animation-play-state: running;
+
+		}
+	}
+}
+
+.bubble--innershadow {
+	.bubble__icon {
+		&:after {
+			@include border-radius(50%, 50%, 50%, 50%);
+			@include box-shadow(0px 0px 50px 0px rgba(0,0,0,0.5) inset);
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 50;
 		}
 	}
 }
@@ -86,6 +95,28 @@
 .bubble__icon--seo {
 	background-image: url('../images/graphic/bubble_icon_seo.png');
 }
+
+
+
+
+
+
+
+/*
+//animation-name: bubbleSpinOut;
+//animation-duration: 400ms;
+//animation-timing-function: ease;
+//animation-iteration-count: 1;
+//animation-fill-mode: backwards;
+//animation-play-state: paused;
+//animation-fill-mode: backwards;
+
+//@include transform(rotate3d(1, 1, 0, -180deg) scale(0.8, 0.8));
+//animation-name: bubbleSpinIn;
+//animation-fill-mode: forward;
+//animation-fill-mode: backwards;
+//animation-play-state: running;
+*/
 
 
 @include keyframes(bubbleSpinOut) {

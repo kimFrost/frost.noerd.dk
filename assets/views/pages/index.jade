@@ -175,37 +175,79 @@ block append content
 				h1.container__headline Udvalgte nörderier
 				div.cluster.cluster--autoHeight
 					div.cluster__list
-						div.cluster__item
-							div.cluster__inner
-								a.card.card--link
-									div.card__image
-										img(src="http://placehold.it/400x195")
-									div.card__body
-										div.rte
-											h2 Headline
-											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						div.cluster__item
-							div.cluster__inner
-								a.card.card--link
-									div.card__image
-										img(src="http://placehold.it/400x195")
-									div.card__body
-										div.rte
-											h2 Headline
-											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						div.cluster__item
-							div.cluster__inner
-								a.card.card--link
-									div.card__image
-										img(src="http://placehold.it/400x195")
-									div.card__body
-										div.rte
-											h2 Headline
-											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						- for(var i=0;i<6;i++)
+							div.cluster__item
+								div.cluster__inner
+									a.card.card--link
+										div.card__image
+											img(src="http://placehold.it/400x195")
+										div.card__body
+											div.rte
+												h2 Headline
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				div.spacer
 				a.btn.btn--center
 					div.btn__text Se flere
 
+
+	section.container.container--partial
+		div.container__content
+			div.container__inner
+				div.rte.rte--layout2
+					h1 Vi er et full-service digitalt bureau med base i Aarhus og København
+					p Vi er født i 1999, men læner os hellere frem end tilbage. Derfor siger vi, at vi er 'født på ny hver dag'. Det er et udtryk for, at vi er ivrige for at holde os skarpe, fornyende & velorienterede. Der skabes konstant nye muligheder på den digitale spilleplade, og vi trækker i den digitale arbejdstrøje, fordi vi er passionerede, har evnerne og lysten til at dyrke feltet. Vi stiller store krav til vores egen formåen og ved, at der skal arbejdes hårdt for at kunne tænke, rådgive og producere på det niveau, som vi stræber efter.
+					p Vi hviler altså ikke på laurbærrene, men trækker erfaringen med ind i dagligdagen. Vi drives frem af forelskelse & fascination for den energi der ligger i interaktionen mellem menneske og maskine. Det bliver dog aldrig teknologi for teknologiens skyld, når vi hjælper nye og eksisterende kunder ud over båndbredderne.
+
+
+	section.container.container--quote
+		div.container__content
+			div.container__inner
+				div.rte.rte--layout3
+					h1 Nørd er et slangudtryk for en person med en stor interesse for et enkelt eller flere emner. Typisk er der tale om interesseområder, der af mange anses for noget underligt noget
+					p Wikipedia
+
+
+	section.container.container--wall
+		div.container__content
+			div.container__inner
+				h1.container__headline Kunder
+				div.wall
+					- for(var i=0;i<44;i++)
+						- var sizes = ['30x40', '70x40', '60x30', '50x20', '40x60', '50x55'];
+						- var randomInt = Math.floor(Math.random()*6);
+						div.wall__item
+							img(src="http://placehold.it/#{sizes[randomInt]}")
+
+
+
+	section.container.container--quote
+		div.container__content
+			div.container__inner
+				div.rte.rte--layout3
+					h1 Er der en nörd gemt i dig?
+					p Vi er altid på udkig efter nye talenter i vores digitale guerillahær, så grib røret eller send os en mail på
+						a &nbspkontakt@noerd.dk
+
+
+	section.container.container--partial
+		div.container__content
+			div.container__inner
+				h1.container__headline Nörder
+				div.cluster.cluster--autoHeight.cluster--line4.cluster--mobileline2
+					div.cluster__list
+						- for(var i=0;i<8;i++)
+							div.cluster__item
+								div.cluster__inner
+									div.card
+										div.card__image
+											div.bubble.bubble--innershadow
+												div.bubble__icon
+													img(src="http://placehold.it/300x300")
+										div.card__body
+											div.rte
+												h2 Name Name
+												p Übergeek
+												a(href="#") Send email
 
 
 	section.container.container--superpadding.theme.container--black

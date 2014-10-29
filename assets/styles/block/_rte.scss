@@ -1,8 +1,18 @@
 
+// NOTES
+/*
+	This is a heavy polluting block. Many tag like p, a, h1 etc, will have their default inheritance overridden.
+	Other blocks might not work as intended in inside this block
+*/
+
+
+// BLOCK
+
 .rte {
 	display: block;
 	width: 100%;
 	color: $color_grey;
+	font-family: $font_openSans;
 }
 
 .rte {
@@ -11,21 +21,44 @@
 	-webkit-box-sizing: border-box;
 }
 
-// Layout Setup 1
+// Default Layout Setup
 
 .rte p,
+.rte a,
 .rte h1,
 .rte h2,
 .rte h3,
 .rte h4 {
-	margin-top: 0;
+	margin: 0;
+	display: block;
+	width: 100%;
+	text-decoration: none;
 	&:last-child {
 		margin-bottom: 0;
+	}
+	& + * {
+		margin-top: 10px;
 	}
 }
 
 .rte p {
-	@include fontSize(delta, 1.2);
+	@include fontSize(zeta, 1.2);
+	font-weight: 100;
+	a {
+		display: inline;
+		text-transform: none;
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+.rte a {
+	@include fontSize(jimmi, 0);
+	color: $color_black;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .rte h1 {
@@ -36,10 +69,53 @@
 }
 
 .rte h2 {
-	@include fontSize(delta, 1.2);
+	@include fontSize(epsilon, 1.2);
 	color: $color_black;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
 // Layout Setup 2
+.rte--layout2 {
+	font-family: $font_openSans;
+	p {
+		@include fontSize(zeta, 1.45);
+		font-weight: 100;
+		text-transform: none;
+	}
+	h1 {
+		@include fontSize(iota, 1.2);
+		font-style: italic;
+		font-weight: 100;
+		text-transform: none;
+	}
+	h2 {
+		text-transform: none;
+		font-weight: 100;
+	}
+}
+
+// Layout Setup 3
+.rte--layout3 {
+	font-family: $font_openSans;
+	text-align: center;
+	p {
+		@include fontSize(zeta, 1.45);
+		font-weight: 100;
+		text-transform: none;
+		a {
+			color: $color_heart;
+			font-weight: 700;
+		}
+	}
+	h1 {
+		@include fontSize(theta, 1.2);
+		font-style: italic;
+		font-weight: 100;
+		text-transform: none;
+	}
+	h2 {
+		text-transform: none;
+		font-weight: 100;
+	}
+}

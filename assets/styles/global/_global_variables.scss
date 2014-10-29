@@ -27,8 +27,8 @@ $color_cyanblue: #127495;
 
 // Media Queries, Labels and Content widths
 $contentWidth: "" !global;
-$mediaQueries: mobile 1px 619px, tablet 620px 1288px, desktop 1289px;
-$mediaQueriesContentWidths: mobile 100%, tablet 560px, desktop 1248px;
+$mediaQueries: mobile 1px 619px, tablet 620px 1008px, narrowdesktop 1009px 1288px, desktop 1289px;
+$mediaQueriesContentWidths: mobile 100%, tablet 560px, narrowdesktop 960px, desktop 1248px;
 $mediaQueriesDefault: mobile;
 
 @mixin resetContentWidth() {

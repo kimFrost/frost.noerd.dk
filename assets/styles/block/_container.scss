@@ -65,6 +65,9 @@ $__useFixedHeader: false;
 	@include mediaQueries(desktop){
 		width: $contentWidth;
 	};
+	@include mediaQueries(narrowdesktop){
+		width: $contentWidth;
+	};
 	@include mediaQueries(mobile){
 		//width: $contentWidth;
 	};
@@ -105,7 +108,7 @@ $__useFixedHeader: false;
 .container__header {
 	display: block;
 	height: $__headerHeight--mobile;
-	@include mediaQueries(desktop tablet) {
+	@include mediaQueries(desktop narrowdesktop tablet) {
 		height: $__headerHeight;
 	}
 	@include onlyInDebug(){
@@ -114,7 +117,7 @@ $__useFixedHeader: false;
 	//& ~ .container__content,
 	& ~ .container__bg {
 		top: $__headerHeight--mobile;
-		@include mediaQueries(desktop tablet) {
+		@include mediaQueries(desktop narrowdesktop tablet) {
 			top: $__headerHeight;
 		}
 	}
@@ -142,10 +145,20 @@ $__useFixedHeader: false;
 .container--partial {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	@include mediaQueries(tablet desktop) {
+	@include mediaQueries(tablet narrowdesktop desktop) {
 		padding-top: 70px;
 		padding-bottom: 70px;
 	}
+}
+
+.container--quote {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.container--wall {
+	padding-top: 70px;
+	padding-bottom: 40px;
 }
 
 .container--list {
