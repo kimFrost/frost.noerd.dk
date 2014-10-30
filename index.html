@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="noerdDk" lang="da">
+<html data-ng-app="NoerdDk" lang="da">
   <head>
     <title>Nörd</title>
     <meta charset="UTF-8">
@@ -8,26 +8,35 @@
     <link rel="stylesheet" href="./css/main.css">
     <!-- Main app js-->
     <!--script(src='./scripts/noerddk_head.js')-->
+    <!--script(src='/assets/scripts/libs/angular.min.js')-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
     <!-- Fonts-->
     <!--link(type="text/css", rel='stylesheet', href='http://fast.fonts.com/cssapi/ba002805-f090-46ee-884b-859604968980.css')-->
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,700,400">
   </head>
   <body>
-    <section data-ng-controller="NoerdCtrl" class="noerd">
-      <header class="container container--header">
+    <section data-ng-controller="NoerdCtrl as noerd" class="noerd">
+      <header data-ng-class="{'container--hide': noerd.states.hideHeader}" class="container container--header">
         <div class="container__content">
           <div class="container__inner">
             <div class="grid grid--12"><a href="/" title="Nörd forside"><img src="./images/content/logo.png" alt="nörd"></a></div>
             <div class="grid grid--12">
-              <nav class="inlinelist noerd__menu"><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Arbejdet</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Om os</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Services</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Nörderier</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Kontakt</a><a class="inlinelist__item querynot--desktop querynot--narrowdesktop">Menu<span class="icon--alignJustify"></span></a></nav>
+              <nav class="inlinelist noerd__menu"><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Arbejdet</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Om os</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Services</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Nörderier</a><a href="#" class="inlinelist__item query--desktop query--narrowdesktop">Kontakt</a><a href="#" data-ng-click="noerd.toogleAsideMenu()" class="inlinelist__item query--desktop query--narrowdesktop">TEST</a><a class="inlinelist__item querynot--desktop querynot--narrowdesktop">Menu<span class="icon--alignJustify"></span></a></nav>
             </div>
           </div>
         </div>
+        <!--div.container__aside(data-ng-class="{'container__aside--show': noerd.states.showAsidemenu}")
+        div.asidemenu asidemenu
+        
+        -->
       </header>
+      <aside data-ng-class="{'container--show': noerd.states.showAsidemenu}" class="container container--aside">
+        <div class="asidemenu">asidemenu</div>
+      </aside>
       <div class="container container--list">
         <section class="container container--fitscreen">
           <!--div.container__header Header-->
-          <div style="background-image:url('./images/graphic/slide_noerd.jpg')" class="container__bg"></div>
+          <div style="background-image:url('./images/graphic/slide_heart.jpg')" class="container__bg"></div>
           <div class="splash">
             <div class="splash__box">
               <!--div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau-->
@@ -354,49 +363,49 @@
             <div class="container__inner">
               <h1 class="container__headline">Kunder</h1>
               <div class="wall">
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
                 <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/30x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
                 <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
               </div>
             </div>
@@ -593,6 +602,9 @@
         </section>
       </div>
     </section>
+    <script src="/assets/scripts/app.js"></script>
+    <script src="/assets/scripts/controllers/noerd.controller.js"></script>
+    <!--script(src="/assets/scripts/controllers/header.controller.js")-->
     <!--script(src='./scripts/noerddk.js')-->
   </body>
 </html>

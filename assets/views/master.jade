@@ -1,5 +1,5 @@
 doctype html
-html(data-ng-app="noerdDk", lang="da")
+html(data-ng-app="NoerdDk", lang="da")
 	head
 		title Nörd
 		meta(charset="UTF-8")
@@ -8,6 +8,8 @@ html(data-ng-app="noerdDk", lang="da")
 		link(rel='stylesheet', href='./css/main.css')
 		// Main app js
 		//script(src='./scripts/noerddk_head.js')
+		//script(src='/assets/scripts/libs/angular.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js')
 		block head
 		// Fonts
 		//link(type="text/css", rel='stylesheet', href='http://fast.fonts.com/cssapi/ba002805-f090-46ee-884b-859604968980.css')
@@ -16,8 +18,8 @@ html(data-ng-app="noerdDk", lang="da")
 	body
 		block glovalVars
 		block body
-		section.noerd(data-ng-controller="NoerdCtrl")
-			header.container.container--header
+		section.noerd(data-ng-controller="NoerdCtrl as noerd")
+			header.container.container--header(data-ng-class="{'container--hide': noerd.states.hideHeader}")
 				div.container__content
 					div.container__inner
 						div.grid.grid--12
@@ -30,12 +32,19 @@ html(data-ng-app="noerdDk", lang="da")
 								a(href="#").inlinelist__item.query--desktop.query--narrowdesktop Services
 								a(href="#").inlinelist__item.query--desktop.query--narrowdesktop Nörderier
 								a(href="#").inlinelist__item.query--desktop.query--narrowdesktop Kontakt
+								a(href="#", data-ng-click="noerd.toogleAsideMenu()").inlinelist__item.query--desktop.query--narrowdesktop TEST
 								a.inlinelist__item.querynot--desktop.querynot--narrowdesktop Menu
 									span.icon--alignJustify
+				//div.container__aside(data-ng-class="{'container__aside--show': noerd.states.showAsidemenu}")
+					div.asidemenu asidemenu
 
+			aside.container.container--aside(data-ng-class="{'container--show': noerd.states.showAsidemenu}")
+				div.asidemenu asidemenu
 
 			div.container.container--list
 				block content
 
-
+		script(src="/assets/scripts/app.js")
+		script(src="/assets/scripts/controllers/noerd.controller.js")
+		//script(src="/assets/scripts/controllers/header.controller.js")
 		//script(src='./scripts/noerddk.js')
