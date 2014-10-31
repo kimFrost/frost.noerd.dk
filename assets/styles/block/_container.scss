@@ -239,7 +239,7 @@ $__useFixedHeader: true;
 		position: fixed;
 		& + .container--aside {
 			top: $__headerHeight;
-			height: calc(100% - #{$__headerHeight})
+			height: calc(100% - #{$__headerHeight});
 		}
 		& + .container--list,
 		& ~ .container--list {

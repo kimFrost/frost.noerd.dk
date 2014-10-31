@@ -2314,6 +2314,196 @@ This is a "icon" module.
   }
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\000036}}
+.slides {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000314}}
+.slides,
+.slides__slide,
+.slides__arrow,
+.slides__list
+.slides__map,
+.slides__mapitem,
+.slides__dev {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000328}}
+.slides__list {
+  -moz-transition: -moz-transform 300ms ease;
+  -o-transition: -o-transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000339}}
+.slides__slide {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000352}}
+.slides__slide:nth-child(2) {
+  left: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000355}}
+.slides__slide:nth-child(3) {
+  left: 200%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000358}}
+.slides__slide:nth-child(4) {
+  left: 300%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000361}}
+.slides__slide:nth-child(5) {
+  left: 400%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000364}}
+.slides__slide:nth-child(6) {
+  left: 500%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000367}}
+.slides__slide:nth-child(7) {
+  left: 600%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000370}}
+.slides__slide:nth-child(8) {
+  left: 700%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000373}}
+.slides__slide:nth-child(9) {
+  left: 800%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000376}}
+.slides__slide:nth-child(10) {
+  left: 900%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000380}}
+a.slides__slide {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\0000384}}
+.slides__arrow {
+  -moz-transition: -moz-transform 300ms ease;
+  -o-transition: -o-transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  -moz-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  color: #313131;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0.8;
+  height: 47px;
+  width: 50px;
+  margin-top: -23.5px;
+  background-color: red;
+  z-index: 40;
+  text-align: center;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.slides__arrow {
+  font-size: 40px;
+  font-size: 2.2222222222rem;
+  line-height: 40px;
+  line-height: 2.2222222222rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_mixins\.scss}line{font-family:\0000374}}
+.slides__arrow:hover {
+  color: #717171;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_mixins\.scss}line{font-family:\0000377}}
+.slides__arrow:active {
+  color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\00003111}}
+.slides__dev {
+  position: fixed;
+  left: 10px;
+  bottom: 30px;
+  background: #313131;
+  color: red;
+  overflow: hidden;
+  padding: 5px;
+  z-index: 20;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/global\/_global_fonts\.scss}line{font-family:\0000357}}
+.slides__dev {
+  font-size: 12px;
+  font-size: 0.6666666667rem;
+  line-height: 12px;
+  line-height: 0.6666666667rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\00003127}}
+.slides--noanimate .slides__list {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\00003132}}
+.slides__arrow--right {
+  left: auto;
+  right: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\00003137}}
+.slides__arrow--hide {
+  -moz-transform: translate(0%, 100%);
+  -ms-transform: translate(0%, 100%);
+  -webkit-transform: translate(0%, 100%);
+  transform: translate(0%, 100%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_slides\.scss}line{font-family:\00003139}}
+.slides__arrow--hide.slides__arrow--top {
+  -moz-transform: translate(0%, -100%);
+  -ms-transform: translate(0%, -100%);
+  -webkit-transform: translate(0%, -100%);
+  transform: translate(0%, -100%);
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/workspace\/frost\.noerd\.dk\/assets\/styles\/block\/_asidemenu\.scss}line{font-family:\000036}}
 .asidemenu {
   display: block;
