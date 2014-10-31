@@ -158,31 +158,6 @@ $__useFixedHeader: true;
 		padding-top: $__headerHeight;
 	}
 
-	/*
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 80%;
-	height: 100%;
-	opacity: 1;
-	//padding-top: $__headerHeight--mobile;
-
-	top: $__headerHeight--mobile;
-	height: calc(100vh - #{$__headerHeight--mobile + 10});
-
-	@include mediaQueries(tablet) {
-		width: 60%;
-	}
-	@include mediaQueries(desktop narrowdesktop) {
-		width: 40%;
-	}
-
-	@include mediaQueries(desktop narrowdesktop tablet) {
-		//padding-top: $__headerHeight;
-		top: $__headerHeight;
-		height: calc(100vh - #{$__headerHeight + 10});
-	}
-	*/
 }
 
 //--- MODIFIERS -------------------------------------------------------//
@@ -262,7 +237,12 @@ $__useFixedHeader: true;
 
 	@if $__useFixedHeader {
 		position: fixed;
-		& + .container--list {
+		& + .container--aside {
+			top: $__headerHeight;
+			height: calc(100% - #{$__headerHeight})
+		}
+		& + .container--list,
+		& ~ .container--list {
 			padding-top: $__headerHeight;
 		}
 	}
@@ -280,14 +260,31 @@ $__useFixedHeader: true;
 	}
 }
 
+.container--show {
+	&.container--aside {
+		@include translate(0%, 0%);
+		opacity: 1;
+	}
+	&.container--overlay {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
 .container--hide {
 	@include translate(0%, -50%);
 	opacity: 0;
 	& + .container--aside {
 		@include translate(-100%, 0%);
+		opacity: 0;
 	}
 	.container__aside {
 		@include translate(-100%, 50px);
+		opacity: 0;
+	}
+	& ~ .container--overlay {
+		opacity: 0;
+		z-index: -1;
 	}
 }
 
@@ -295,12 +292,27 @@ $__useFixedHeader: true;
 	@include transition(transform 300ms ease, opacity 300ms ease);
 	@include translate(-100%, 0%);
 	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background-color: darkred;
+	z-index: 10;
+	opacity: 0;
 }
 
-.container--show {
-	&.container--aside {
-		@include translate(0%, 0%);
-	}
+.container--overlay {
+	@include transition(opacity 300ms ease);
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: -1;
+	padding: 0;
 }
 
 .container--black {

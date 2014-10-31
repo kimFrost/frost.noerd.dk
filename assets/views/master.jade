@@ -41,10 +41,12 @@ html(data-ng-app="NoerdDk", lang="da")
 			aside.container.container--aside(data-ng-class="{'container--show': noerd.states.showAsidemenu}")
 				div.asidemenu asidemenu
 
+			div.container.container--overlay(data-ng-class="{'container--show': noerd.states.showAsidemenu}")
+
 			div.container.container--list
 				block content
 
-		script(src="/assets/scripts/app.js")
-		script(src="/assets/scripts/controllers/noerd.controller.js")
+		script(src="./assets/scripts/app.js")
+		script(src="./assets/scripts/controllers/noerd.controller.js")
 		//script(src="/assets/scripts/controllers/header.controller.js")
 		//script(src='./scripts/noerddk.js')
