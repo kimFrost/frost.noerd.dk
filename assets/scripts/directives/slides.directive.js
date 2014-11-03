@@ -4,17 +4,17 @@
 	'use strict';
 
 	angular
-		.module('lysApp')
-		.directive('lightbox', lightbox);
+		.module('NoerdDk')
+		.directive('slides', lightbox);
 	
 	/* @ngInject */
 	function lightbox($timeout) {
 		var directive = {
 			replace: true,
-			templateUrl: '/templates/lightbox.html',
+			//templateUrl: '/templates/lightbox.html',
 			link: link,
 			scope: {
-				lightboxItems: '='
+				slides: '&'
 			},
 			restrict: 'A',
 			controller: directiveController
@@ -23,7 +23,7 @@
 		/* @ngInject */
 		function directiveController($scope) {
 
-				$scope.lightbox = {
+				$scope.slides = {
 					options: {
 						loop: false,
 						autoplay: false,
@@ -53,31 +53,9 @@
 					css: {}
 				};
 
-
-				$scope.lightbox.open = function() {
-					// Start autoplay if option is set to
-					$scope.lightbox.autoplay = $scope.lightbox.options.autoplay;
-					$scope.lightbox.states.show = true;
-					$scope.lightbox.states.boxAnimating = true;
-					$scope.lightbox.setAutoPlay();
-					$timeout(function() {
-						$scope.lightbox.states.boxAnimating = false;
-					},$scope.lightbox.options.boxAnimationTime);
-				};
-
-				$scope.lightbox.close = function() {
-					// Stop autoplay
-					$scope.lightbox.autoplay = false;
-					$scope.lightbox.states.show = false;
-					$scope.lightbox.states.boxAnimating = true;
-					$timeout(function() {
-						$scope.lightbox.states.boxAnimating = false;
-					},$scope.lightbox.options.boxAnimationTime);
-				};
-
-				$scope.lightbox.checkActive = function(id) {
+				$scope.slides.checkActive = function(id) {
 					if (id !== undefined) {
-						if (id === $scope.lightbox.currentIndex) {
+						if (id === $scope.slides.currentIndex) {
 							return true;
 						}
 						else {
@@ -86,45 +64,45 @@
 					}
 				};
 
-				$scope.lightbox.setAutoPlay = function(direction) {
+				$scope.slides.setAutoPlay = function(direction) {
 					direction = (direction === undefined) ? 1 : direction;
-					if ($scope.lightbox.autoplay) {
-						$scope.lightbox.timer = $timeout(function(){
-							$scope.lightbox.switchSlide(direction);
-						},$scope.lightbox.options.autoplaytime);
+					if ($scope.slides.autoplay) {
+						$scope.slides.timer = $timeout(function(){
+							$scope.slides.switchSlide(direction);
+						},$scope.slides.options.autoplaytime);
 					}
 				};
 
-				$scope.lightbox.switchSlide = function(direction, jump) {
+				$scope.slides.switchSlide = function(direction, jump) {
 					direction = (direction === undefined) ? 1 : direction;
 					jump = (jump === undefined) ? false : jump;
-					$timeout.cancel($scope.lightbox.timer);
-					var activeIndex = $scope.lightbox.currentIndex;
+					$timeout.cancel($scope.slides.timer);
+					var activeIndex = $scope.slides.currentIndex;
 					var newActiveIndex;
 					if (jump) {
 						newActiveIndex = direction;
 					}
 					else {
-						if ($scope.lightbox.options.loop) {
-							newActiveIndex = (activeIndex + direction) % $scope.lightboxItems.length;
+						if ($scope.slides.options.loop) {
+							newActiveIndex = (activeIndex + direction) % $scope.slidesLength;
 						}
 						else {
 							newActiveIndex = activeIndex + direction;
-							if (newActiveIndex > ($scope.lightboxItems.length-1)) {
-								newActiveIndex = $scope.lightboxItems.length-1;
+							if (newActiveIndex > ($scope.slidesLength - 1)) {
+								newActiveIndex = $scope.slidesLength - 1;
 							}
 						}
 					}
 					if (newActiveIndex < 0) {
-						if ($scope.lightbox.options.loop) {
-							newActiveIndex = Math.abs($scope.lightboxItems.length + newActiveIndex);
+						if ($scope.slides.options.loop) {
+							newActiveIndex = Math.abs($scope.slidesLength + newActiveIndex);
 						}
 						else {
 							newActiveIndex = 0;
 						}
 					}
-					$scope.lightbox.currentIndex = newActiveIndex;
-					$scope.lightbox.setAutoPlay(direction);
+					$scope.slides.currentIndex = newActiveIndex;
+					$scope.slides.setAutoPlay(direction);
 				};
 
 			}
@@ -133,18 +111,18 @@
 		function link(scope, element, attrs) {
 
 			// Scope Bindings
-			scope.$watch('lightboxItems', function(oldval, newval) {
-				scope.lightbox.currentIndex = 0;
+			scope.$watch('slides', function(oldval, newval) {
+				scope.slides.currentIndex = 0;
 			}, true);
 
 			scope.$on('lightbox:open', function() {
 				//console.info('lightbox:open');
-				scope.lightbox.open();
+				scope.slides.open();
 			});
 
 			scope.$on('lightbox:close', function() {
 				//console.info('lightbox:close');
-				scope.lightbox.close();
+				scope.slides.close();
 			});
 
 			// Input Bindings
@@ -159,17 +137,17 @@
 				else {
 					baseX = event.clientX;
 				}
-				scope.lightbox.temp.baseTime = Date.now();
-				scope.lightbox.temp.baseX = baseX;
-				scope.lightbox.temp.basePointX = baseX;
-				scope.lightbox.states.moveListen = true;
+				scope.slides.temp.baseTime = Date.now();
+				scope.slides.temp.baseX = baseX;
+				scope.slides.temp.basePointX = baseX;
+				scope.slides.states.moveListen = true;
 				//$scope.$apply();
 			});
 
 			// Bind mouse Up and Leave
 			element.bind('mouseup mouseleave touchend', function(event) {
-				//scope.lightbox.states.noAnimate = false;
-				//scope.lightbox.states.moveListen = false;
+				//scope.slides.states.noAnimate = false;
+				//scope.slides.states.moveListen = false;
 				var x = 0;
 				if (event.changedTouches !== undefiend) {
 					x = event.changedTouches[0].clientX;
@@ -177,29 +155,29 @@
 				else {
 					x = event.clientX;
 				}
-				var timeDiff = Date.now() - scope.lightbox.temp.baseTime;
-				var xDistance = x - scope.lightbox.temp.basePointX;
+				var timeDiff = Date.now() - scope.slides.temp.baseTime;
+				var xDistance = x - scope.slides.temp.basePointX;
 				var direction = 1;
 				if (xDistance > 0) {
 					direction = -1;
 				}
 				xDistance = Math.abs(xDistance);
 				// Check for swipe
-				if (timeDiff > scope.lightbox.options.swipeMinTime &&
-					timeDiff < scope.lightbox.options.swipeMaxTime &&
-					xDistance < scope.lightbox.options.swipeMaxDistance &&
-					xDistance > scope.lightbox.options.swipeMinDistance
+				if (timeDiff > scope.slides.options.swipeMinTime &&
+					timeDiff < scope.slides.options.swipeMaxTime &&
+					xDistance < scope.slides.options.swipeMaxDistance &&
+					xDistance > scope.slides.options.swipeMinDistance
 					) {
 					//console.info('swipe');
-					//scope.lightbox.temp.allowClick = false;
-					scope.lightbox.switchSlide(direction);
+					//scope.slides.temp.allowClick = false;
+					scope.slides.switchSlide(direction);
 				}
 				else if (xDistance === 0) {
 					// Didn't move cursor, therefore a single click
-					scope.lightbox.temp.allowClick = true;
+					scope.slides.temp.allowClick = true;
 				}
 				else {
-					scope.lightbox.temp.allowClick = false;
+					scope.slides.temp.allowClick = false;
 					//recalPos();
 				}
 				scope.$apply();

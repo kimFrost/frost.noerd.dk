@@ -15,6 +15,7 @@
   "regexp": true,
   "undef": false,
   "unused": false,
+  "validthis": true,
   "strict": true,
   "trailing": true,
   "smarttabs": true,

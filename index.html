@@ -38,12 +38,38 @@
         <section class="container container--fitscreen">
           <!--div.container__header Header-->
           <div style="background-image:url('./images/graphic/slide_heart.jpg')" class="container__bg"></div>
-          <div class="splash">
-            <div class="splash__box">
-              <!--div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau-->
-              <!--div.fontsize--gamma Med kærlghed til mennesker og maskiner-->
-              <div class="splash__bigline">Vi er et full service digitalt bureau</div>
-              <div class="splash__smallline">Med kærlghed til mennesker og maskiner</div>
+          <div data-slides="3" data-slides-autoplay="true" data-ng-controller="SlidesCtrl as slides" class="slides">
+            <div data-ng-style="slides.css" class="slides__list">
+              <div class="slides__slide">
+                <div class="splash">
+                  <div class="splash__box">
+                    <!--div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau-->
+                    <!--div.fontsize--gamma Med kærlghed til mennesker og maskiner-->
+                    <div class="splash__bigline">Vi er et full service digitalt bureau</div>
+                    <div class="splash__smallline">Med kærlghed til mennesker og maskiner</div>
+                  </div>
+                </div>
+              </div>
+              <div class="slides__slide">
+                <div class="splash">
+                  <div class="splash__box">
+                    <!--div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau-->
+                    <!--div.fontsize--gamma Med kærlghed til mennesker og maskiner-->
+                    <div class="splash__bigline">Vi er et full service digitalt bureau</div>
+                    <div class="splash__smallline">Med kærlghed til mennesker og maskiner</div>
+                  </div>
+                </div>
+              </div>
+              <div class="slides__slide">
+                <div class="splash">
+                  <div class="splash__box">
+                    <!--div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau-->
+                    <!--div.fontsize--gamma Med kærlghed til mennesker og maskiner-->
+                    <div class="splash__bigline">Vi er et full service digitalt bureau</div>
+                    <div class="splash__smallline">Med kærlghed til mennesker og maskiner</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="container__content">
@@ -66,18 +92,18 @@
             </div>
           </div>
           <div style="width:100%;height:500px;">
-            <div data-slides="3" data-slides-autoplay="false" class="slides">
-              <div class="slides__list">
+            <div data-slides="3" data-slides-autoplay="true" data-ng-controller="SlidesCtrl as slides" class="slides">
+              <div data-ng-style="slides.css" class="slides__list">
                 <div class="slides__slide">1</div>
                 <div class="slides__slide">2</div>
                 <div class="slides__slide">3</div>
               </div>
-              <div class="slides__arrow"></div>
-              <div class="slides__arrow slides__arrow--right"></div>
+              <div data-ng-click="slides.switchSlide(-1)" class="slides__arrow"></div>
+              <div data-ng-click="slides.switchSlide(1)" class="slides__arrow slides__arrow--right"></div>
               <div class="slides__map">
-                <div class="slides__mapitem">1</div>
-                <div class="slides__mapitem">2</div>
-                <div class="slides__mapitem">3</div>
+                <div data-ng-class="{'slides__mapitem--active': slides.checkActive(0)}" class="slides__mapitem">1</div>
+                <div data-ng-class="{'slides__mapitem--active': slides.checkActive(1)}" class="slides__mapitem">2</div>
+                <div data-ng-class="{'slides__mapitem--active': slides.checkActive(2)}" class="slides__mapitem">3</div>
               </div>
             </div>
           </div>
@@ -389,50 +415,50 @@
             <div class="container__inner">
               <h1 class="container__headline">Kunder</h1>
               <div class="wall">
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x55"></div>
                 <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x20"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x55"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x20"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/50x20"></div>
                 <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/40x60"></div>
                 <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
                 <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
                 <div class="wall__item"><img src="http://placehold.it/50x55"></div>
-                <div class="wall__item"><img src="http://placehold.it/30x40"></div>
-                <div class="wall__item"><img src="http://placehold.it/40x60"></div>
-                <div class="wall__item"><img src="http://placehold.it/60x30"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
+                <div class="wall__item"><img src="http://placehold.it/70x40"></div>
               </div>
             </div>
           </div>
@@ -630,6 +656,7 @@
     </section>
     <script src="./assets/scripts/app.js"></script>
     <script src="./assets/scripts/controllers/noerd.controller.js"></script>
+    <script src="./assets/scripts/controllers/slides.controller.js"></script>
     <!--script(src="/assets/scripts/controllers/header.controller.js")-->
     <!--script(src='./scripts/noerddk.js')-->
   </body>

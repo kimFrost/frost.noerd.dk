@@ -9,12 +9,32 @@ block append content
 	section.container.container--fitscreen
 		//div.container__header Header
 		div.container__bg(style="background-image:url('./images/graphic/slide_heart.jpg')")
-		div.splash
-			div.splash__box
-				//div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau
-				//div.fontsize--gamma Med kærlghed til mennesker og maskiner
-				div.splash__bigline Vi er et full service digitalt bureau
-				div.splash__smallline Med kærlghed til mennesker og maskiner
+
+		div.slides(data-slides="3", data-slides-autoplay="true", data-ng-controller="SlidesCtrl as slides")
+			div.slides__list(data-ng-style="slides.css")
+				div.slides__slide
+					div.splash
+						div.splash__box
+							//div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau
+							//div.fontsize--gamma Med kærlghed til mennesker og maskiner
+							div.splash__bigline Vi er et full service digitalt bureau
+							div.splash__smallline Med kærlghed til mennesker og maskiner
+				div.slides__slide
+					div.splash
+						div.splash__box
+							//div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau
+							//div.fontsize--gamma Med kærlghed til mennesker og maskiner
+							div.splash__bigline Vi er et full service digitalt bureau
+							div.splash__smallline Med kærlghed til mennesker og maskiner
+				div.slides__slide
+					div.splash
+						div.splash__box
+							//div.fontsize--iota.lineheight--kappa Vi er et full service digitalt bureau
+							//div.fontsize--gamma Med kærlghed til mennesker og maskiner
+							div.splash__bigline Vi er et full service digitalt bureau
+							div.splash__smallline Med kærlghed til mennesker og maskiner
+
+
 		div.container__content
 			div.container__inner
 		div.attachment SCROLL NED
@@ -33,17 +53,17 @@ block append content
 				h1.container__headline.container__headline--closer Seneste arbejde
 
 		div(style="width:100%;height:500px;")
-			div.slides(data-slides="3", data-slides-autoplay="false")
-				div.slides__list
+			div.slides(data-slides="3", data-slides-autoplay="true", data-ng-controller="SlidesCtrl as slides")
+				div.slides__list(data-ng-style="slides.css")
 					div.slides__slide 1
 					div.slides__slide 2
 					div.slides__slide 3
-				div.slides__arrow
-				div.slides__arrow.slides__arrow--right
+				div.slides__arrow(data-ng-click="slides.switchSlide(-1)")
+				div.slides__arrow.slides__arrow--right(data-ng-click="slides.switchSlide(1)")
 				div.slides__map
-					div.slides__mapitem 1
-					div.slides__mapitem 2
-					div.slides__mapitem 3
+					div.slides__mapitem(data-ng-class="{'slides__mapitem--active': slides.checkActive(0)}") 1
+					div.slides__mapitem(data-ng-class="{'slides__mapitem--active': slides.checkActive(1)}") 2
+					div.slides__mapitem(data-ng-class="{'slides__mapitem--active': slides.checkActive(2)}") 3
 
 		div.spacer
 		a.btn.btn--center
